@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<QuestManager xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Quests>
+    <Quest>Chapter1/Day1/Ch1_Day1_POSOSAT_HUY</Quest>
+  </Quests>
+</QuestManager>
