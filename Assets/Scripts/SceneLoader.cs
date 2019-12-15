@@ -39,9 +39,10 @@ public class SceneLoader : MonoBehaviour
         dialog.text = "text1";
         quest.dialog = new DialogEntity[1];
         quest.dialog[0] = dialog;
-        quest.id = "Chapter1/Day1/Ch1_Day1_POSOSAT_HUY";
+        quest.id = "Chapter1/Day1/Ch1_Day1_Quest1";
         questManager.quests = new string[1];
         questManager.quests[0] = quest.id;
+        questManager.questID = quest.id;
 
         XMLUtil.Serialize(quest, "Assets/base_mm/GameStory/" + quest.id + ".xml");
         XMLUtil.Serialize(questManager, "Assets/base_mm/Quests.xml");*/

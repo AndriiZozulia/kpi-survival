@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <QuestManager xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <QuestID>Chapter1/Day1/Ch1_Day1_Quest1</QuestID>
   <Quests>
-    <Quest>Chapter1/Day1/Ch1_Day1_POSOSAT_HUY</Quest>
+    <Quest>Chapter1/Day1/Ch1_Day1_Quest1</Quest>
   </Quests>
 </QuestManager>

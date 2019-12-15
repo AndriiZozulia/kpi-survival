@@ -14,8 +14,9 @@ public class ActionButtonBaseHandler : MonoBehaviour
         //Must be overrided
     }
 
-    private void OnMouseDown()
+    protected void OnMouseDown()
     {
+        Debug.Log("ActionButtonBaseHandler -> OnMouseDown()");
         // Do some action and load scene
         Action();
         if (_sceneLoader)
