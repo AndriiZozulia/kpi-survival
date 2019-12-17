@@ -27,6 +27,7 @@ public class QuestManager
 
     private static QuestManager Load()
     {
+        Debug.Log("QuestManager -> Init()");
         QuestManager questManager = XMLUtil.Deserialize<QuestManager>("Assets/base_mm/Quests.xml");
         questManager._index = Array.FindIndex(questManager.quests, element => element == questManager.questID);
         return questManager;
@@ -67,8 +68,7 @@ public class QuestManager
         }
 
         Debug.Log("There is no quest with id: " + findQuestID);
-        
-        return null;
+        throw new NullReferenceException();
     }
 
     public DialogEntity GetDialogEntity(string dialogID, string findQuest = "default")

@@ -1,4 +1,5 @@
 ﻿using Entity;
+using UnityEngine;
 
 public class StoryControlerManager
 {
@@ -19,14 +20,14 @@ public class StoryControlerManager
 
     private void Init()
     {
-        currQuest = GameManager.GetInstance().GetQuestManager().GetQuest();
+        Debug.Log("StoryControlerManager -> Init()");
+        currQuest = QuestManager.GetInstance().GetQuest();
         actionIndex = 0;
     }
 
-    public static void StartStory()
+    public void StartStory()
     {
-        GetInstance().Init();
-        GetInstance().SetCurrActionOnScene();
+        SetCurrActionOnScene();
     }
 
     private void SetCurrActionOnScene()
@@ -36,7 +37,7 @@ public class StoryControlerManager
             ActionEntity currAction = currQuest.actions[actionIndex];
             if (currAction.type.Equals("Dialog"))
             {
-                GameManager.GetInstance().GetDialogManager().StartDialogAction(currAction.id, currAction.texture);
+                DialogManager.GetInstance().StartDialogAction(currAction.id, currAction.texture);
             }
         }
     }
@@ -50,7 +51,7 @@ public class StoryControlerManager
         }
         else
         {
-            GameManager.GetInstance().GetQuestManager().SetNextQuest();
+            QuestManager.GetInstance().SetNextQuest();
             Init();
             StartStory();
         }

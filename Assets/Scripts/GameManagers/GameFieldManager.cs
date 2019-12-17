@@ -33,18 +33,17 @@ public class GameFieldManager
 
     private void Init()
     {
-        currQuest = GameManager.GetInstance().GetQuestManager().GetQuest();
+        Debug.Log("GameFieldManager -> Init()");
+        currQuest = QuestManager.GetInstance().GetQuest();
     }
 
-    public static void SetGameFieldForQuest()
+    public void SetGameFieldForQuest()
     {
-        var manager = GetInstance();
-        manager.Init();
-        manager.Background = FindUtil.FindIncludingInactive("Background");
-        if (manager.Background)
+        Background = FindUtil.FindIncludingInactive("Background");
+        if (Background)
         {
-            manager.Background.GetComponent<Image>().sprite = Resources.Load<Sprite>(GetInstance().currQuest.background);
-            manager.Background.SetActive(true);
+            Background.GetComponent<Image>().sprite = Resources.Load<Sprite>(GetInstance().currQuest.background);
+            Background.SetActive(true);
         }
     }
 
@@ -104,6 +103,6 @@ public class GameFieldManager
 
     private void SetShowMiniGame(bool show)
     {
-
+        MiniGame.SetActive(show);
     }
 }

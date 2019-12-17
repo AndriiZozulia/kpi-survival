@@ -1,4 +1,6 @@
-﻿public class GameManager
+﻿using UnityEngine;
+
+public class GameManager
 {
     private static GameManager Instance;
     private QuestManager questManager;
@@ -37,6 +39,7 @@
 
     public static void Init()
     {
+        Debug.Log("GameManager -> Init()");
         Instance = new GameManager
         {
             questManager = QuestManager.GetInstance(),
@@ -48,7 +51,7 @@
 
     public void StartGame()
     {
-        GameFieldManager.SetGameFieldForQuest();
-        StoryControlerManager.StartStory();
+        gameFieldManager.SetGameFieldForQuest();
+        storyControler.StartStory();
     }
 }

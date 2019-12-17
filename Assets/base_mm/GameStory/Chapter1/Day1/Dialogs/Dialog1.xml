@@ -5,5 +5,13 @@
       <text>TEXT_1</text>
       <texture>/texture/path</texture>
     </Replica>
+    <Replica>
+      <text>TEXT_1_1</text>
+      <texture>/texture/path</texture>
+    </Replica>
+    <Replica>
+      <text>TEXT_1_2</text>
+      <texture>/texture/path</texture>
+    </Replica>
   </Replics>
 </DialogEntity>

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class DialogManager
 {
@@ -16,17 +17,19 @@ public class DialogManager
         return Instance;
     }
 
-    private GameObject dialogAction;
-    private GameObject dialogBttn;
+    private static GameObject dialogAction;
+    private static GameObject dialogBttn;
 
     private void Init()
     {
+        Debug.Log("DialogManager -> Init()");
         dialogBttn = FindUtil.FindIncludingInactive("DialogButton");
         dialogAction = FindUtil.FindIncludingInactive("Dialog");
     }
 
     public void StartDialogAction(string dialogID, string texture)
     {
+        Init();
         if (dialogBttn)
         {
             dialogBttn.GetComponent<Image>().sprite = Resources.Load<Sprite>(texture);
@@ -35,6 +38,7 @@ public class DialogManager
         else
         {
             Debug.Log("dialogBttn == null");
+            throw new NullReferenceException();
         }
 
         if (dialogAction)
@@ -44,6 +48,7 @@ public class DialogManager
         else
         {
             Debug.Log("dialogAction == null");
+            throw new NullReferenceException();
         }
     }
 
