@@ -16,8 +16,6 @@ public class ActionButtonBaseHandler : MonoBehaviour
 
     protected void OnMouseDown()
     {
-        Debug.Log("ActionButtonBaseHandler -> OnMouseDown()");
-        // Do some action and load scene
         Action();
         if (_sceneLoader)
         {

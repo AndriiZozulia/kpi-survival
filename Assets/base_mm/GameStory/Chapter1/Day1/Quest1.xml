@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Quest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Quest1" day="Chapter1/Day1" background="UI/MainMenu/main_bg" >
+  <Actions>
+    <Action id="Dialog1" type="Dialog" path="Dialog1.xml" texture="UI/Buttons/ButtonsStyle13_02" />
+    <Action id="Dialog2" type="Dialog" path="Dialog2.xml" texture="UI/Buttons/ButtonsStyle13_03" />
+    <Action id="Dialog3" type="Dialog" path="Dialog3.xml" texture="UI/Buttons/ButtonsStyle13_04" />
+    <Action id="Dialog4" type="Dialog" path="Dialog4.xml" texture="UI/Buttons/ButtonsStyle13_06" />
+  </Actions>
+</Quest>

@@ -5,10 +5,13 @@ namespace Entity
     [XmlRoot("DialogEntity")]
     public class DialogEntity
     {
-        [XmlElement("text")]
-        public string text;
+        [XmlAttribute("id")]
+        public string id;
 
-		[XmlElement("texture")]
-		public string texture;
+        [XmlElement("BGTexture")]
+        public string texture;
+
+        [XmlArray("Replics"), XmlArrayItem("Replica")]
+        public ReplicaEntity[] replics;
     }
 }

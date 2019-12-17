@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class GameManagerBehaviour : MonoBehaviour
 {
-    void Start()
+    bool updated = false;
+    void Update()
     {
-        GameManager.Init();    
+        if (updated)
+        {
+            return;
+        }
+
+        updated = true;
+        GameManager.GetInstance().StartGame();    
     }
 }

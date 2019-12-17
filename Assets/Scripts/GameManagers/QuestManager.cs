@@ -16,7 +16,7 @@ public class QuestManager
         return Instance;
     }
 
-    [XmlElement("QuestID")]
+    [XmlElement("LastQuestID")]
     public string questID;
 
     [XmlArray("Quests"), XmlArrayItem("Quest")]
@@ -54,29 +54,37 @@ public class QuestManager
         return null;
     }
 
-    public QuestEntity GetCurrQuest()
+    public QuestEntity GetQuest(string findQuestID = "default")
     {
-        return GetQuest(questID);
-    }
+        if (findQuestID.Equals("default"))
+        {
+            findQuestID = questID;
+        }
 
-    public QuestEntity GetQuest(string findQuestID)
-    {
         if (Array.FindIndex(Instance.quests, element => element == findQuestID) != -1)
         {
             return XMLUtil.Deserialize<QuestEntity>("Assets/base_mm/GameStory/" + findQuestID + ".xml");
         }
-        else
+
+        Debug.Log("There is no quest with id: " + findQuestID);
+        
+        return null;
+    }
+
+    public DialogEntity GetDialogEntity(string dialogID, string findQuest = "default")
+    {
+        if (findQuest.Equals("default"))
         {
-            Debug.Log("There is no quest with id: " + findQuestID);
+            return GetQuest().GetDialogEntity(dialogID);
         }
 
-        return null;
+        return GetQuest(findQuest).GetDialogEntity(dialogID);
     }
 
     public string SetNextQuest()
     {
         string nextQuest = "";
-        if (_index > 0 && _index < quests.Length - 1)
+        if (_index >= 0 && _index < quests.Length - 1)
         {
             _index += 1;
             questID = quests[_index];
