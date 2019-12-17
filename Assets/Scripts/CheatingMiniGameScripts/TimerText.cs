@@ -1,24 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
-using System.Threading.Tasks;
-using System.Timers;
-using Timer = System.Timers.Timer;
-using System;
 
 public class TimerText : MonoBehaviour
 {
-     public float timer = 0.0f;
-     public static int seconds = 0;
+    public float timer = 0.0f;
+    public static int seconds = 0;
     public GameObject timerText;
     // Start is called before the first frame update
     void Start()
     {
-         timerText = GameObject.FindWithTag("TimerText");
+         timerText = GameObject.Find("TimerText");
     }
 
     // Update is called once per frame

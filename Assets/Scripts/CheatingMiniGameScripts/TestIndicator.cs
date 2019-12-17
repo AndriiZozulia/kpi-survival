@@ -1,13 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Threading.Tasks;
-using System.Timers;
-using Timer = System.Timers.Timer;
-using System;
 
 public class TestIndicator : MonoBehaviour
 {
@@ -19,7 +12,7 @@ public  GameObject testIndi;
     // Start is called before the first frame update
     void Start()
     {
-        testIndi = GameObject.FindWithTag("TestIndicator");
+        testIndi = GameObject.Find("TestIndicator");
     }
 
     // Update is called once per frame
