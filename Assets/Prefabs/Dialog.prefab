@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8490903805473356406}
   - component: {fileID: 1674434832362793049}
   - component: {fileID: 2092016033641733986}
+  - component: {fileID: 1821415750341135493}
   m_Layer: 5
   m_Name: PanelBG
   m_TagString: Untagged
@@ -35,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120}
+  m_AnchoredPosition: {x: 0, y: -300}
   m_SizeDelta: {x: 800, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1674434832362793049
@@ -74,6 +75,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &1821415750341135493
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3689552424129569005}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 1d5d44bd6c607433b9cfbda3d1468871, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 1d5d44bd6c607433b9cfbda3d1468871, type: 2}
+  m_WrapMode: 1
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6062524994466022433
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +282,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e68e36478eb0427fa1a2eb3c661e4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questID: 
   dialogID: 
   text: {fileID: 4263099725995176519}

@@ -4,22 +4,11 @@ using UnityEngine;
 
 public class ActionButtonDialog : ActionButtonBaseHandler
 {
-    public DialogAction dialogObject;
-
     public override void Action()
     {
-        if (dialogObject)
-        {
-            dialogObject.gameObject.SetActive(true);
-        }
+        GameFieldManager.GetInstance().SetGameFieldState(GameFieldState.Dialog);
 
         base.Action();
-
         gameObject.SetActive(false);
-    }
-
-    public void SetDialog(string dialogID)
-    {
-        dialogObject.SetDialog(dialogID);
     }
 }
