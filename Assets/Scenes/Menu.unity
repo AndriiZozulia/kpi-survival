@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 60823853}
   - component: {fileID: 60823852}
   - component: {fileID: 60823854}
+  - component: {fileID: 60823855}
   m_Layer: 0
   m_Name: SettingsBttn
   m_TagString: Untagged
@@ -158,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -245.20001, y: -34.999977}
+  m_AnchoredPosition: {x: -540, y: -35}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &60823849
@@ -268,6 +269,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleStep: 0.05
+--- !u!111 &60823855
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60823847}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 6e147ace87815674883b53cd5041bf87, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 6e147ace87815674883b53cd5041bf87, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &105714664
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +399,7 @@ GameObject:
   - component: {fileID: 488395532}
   - component: {fileID: 488395531}
   - component: {fileID: 488395533}
+  - component: {fileID: 488395534}
   m_Layer: 0
   m_Name: ContinueBttn
   m_TagString: Untagged
@@ -405,7 +423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -245.2, y: 106.4}
+  m_AnchoredPosition: {x: -540, y: 105}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &488395528
@@ -514,6 +532,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleStep: 0.05
+--- !u!111 &488395534
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488395526}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: db38bd7d0332dbb48948ecfe64460838, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: db38bd7d0332dbb48948ecfe64460838, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &545228094
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +563,7 @@ GameObject:
   - component: {fileID: 545228100}
   - component: {fileID: 545228099}
   - component: {fileID: 545228101}
+  - component: {fileID: 545228102}
   m_Layer: 0
   m_Name: SaveBttn
   m_TagString: Untagged
@@ -552,7 +587,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -245.20001, y: 35}
+  m_AnchoredPosition: {x: -540, y: 35}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &545228096
@@ -661,6 +696,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleStep: 0.05
+--- !u!111 &545228102
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545228094}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2c406a2c37f976a4995dc21ab43b11f5, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2c406a2c37f976a4995dc21ab43b11f5, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &678519289
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +793,7 @@ GameObject:
   - component: {fileID: 809448308}
   - component: {fileID: 809448307}
   - component: {fileID: 809448306}
+  - component: {fileID: 809448309}
   m_Layer: 0
   m_Name: MainMenuBttn
   m_TagString: Untagged
@@ -765,7 +817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -245.20001, y: -104.99996}
+  m_AnchoredPosition: {x: -540, y: -105}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &809448303
@@ -874,6 +926,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleStep: 0.05
+--- !u!111 &809448309
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809448301}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 8caa9db72ed59bd4fabd966e5fa31aa5, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 8caa9db72ed59bd4fabd966e5fa31aa5, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1001644904
 GameObject:
   m_ObjectHideFlags: 0
