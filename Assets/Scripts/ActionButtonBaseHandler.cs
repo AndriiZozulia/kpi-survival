@@ -2,7 +2,7 @@
 
 public class ActionButtonBaseHandler : MonoBehaviour
 {
-    private SceneLoader _sceneLoader;
+    SceneLoader _sceneLoader;
     // Start is called before the first frame update
     void Start()
     {

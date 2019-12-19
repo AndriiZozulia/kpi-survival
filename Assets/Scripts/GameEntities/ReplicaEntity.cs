@@ -5,10 +5,13 @@ namespace Entity
     [XmlRoot("Replica")]
     public class ReplicaEntity
     {
-        [XmlElement("text")]
+        [XmlAttribute("type")]
+        public string type;
+
+        [XmlAttribute("text")]
         public string text;
 
-		[XmlElement("texture")]
+		[XmlAttribute("texture")]
 		public string texture;
     }
 }

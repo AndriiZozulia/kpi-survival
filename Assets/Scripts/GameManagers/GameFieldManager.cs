@@ -11,30 +11,30 @@ public enum GameFieldState
 
 public class GameFieldManager
 {
-    private static GameFieldManager Instance;
+    static GameFieldManager Instance;
 
-    private QuestEntity currQuest;
-    private GameFieldState currState;
+    QuestEntity currQuest;
+    GameFieldState currState;
 
-    private GameObject UI;
-    private GameObject Dialog;
-    private GameObject MiniGame;
-    private GameObject Background;
+    GameObject UI;
+    GameObject Dialog;
+    GameObject MiniGame;
+    GameObject Background;
 
     public static GameFieldManager GetInstance()
     {
         if (Instance == null)
         {
             Instance = new GameFieldManager();
-            Instance.Init();
+            Instance.Load();
         }
         return Instance;
     }
 
-    private void Init()
+    public void Load()
     {
-        Debug.Log("GameFieldManager -> Init()");
         currQuest = QuestManager.GetInstance().GetQuest();
+        currState = GameFieldState.Quest;
     }
 
     public void SetGameFieldForQuest()
@@ -65,7 +65,7 @@ public class GameFieldManager
         currState = state;
     }
 
-    private void HidePrevious()
+    void HidePrevious()
     {
         switch (currState)
         {
@@ -81,7 +81,7 @@ public class GameFieldManager
         }
     }
 
-    private void SetShowUI(bool show)
+    void SetShowUI(bool show)
     {
         if (!UI)
         {
@@ -91,7 +91,7 @@ public class GameFieldManager
         UI.SetActive(show);
     }
 
-    private void SetShowDialog(bool show)
+    void SetShowDialog(bool show)
     {
         if (!Dialog)
         {
@@ -101,7 +101,7 @@ public class GameFieldManager
         Dialog.SetActive(show);
     }
 
-    private void SetShowMiniGame(bool show)
+    void SetShowMiniGame(bool show)
     {
         MiniGame.SetActive(show);
     }

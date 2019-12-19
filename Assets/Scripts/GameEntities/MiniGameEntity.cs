@@ -1,8 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Xml.Serialization;
 
-public class MiniGameEntity
+namespace Entity
 {
-    
+    [XmlRoot("MiniGame")]
+    public class MiniGameEntity
+    {
+        [XmlAttribute("id")]
+        public string id;
+
+        [XmlAttribute("difficulty")]
+        public int difficulty;
+
+
+    }
 }

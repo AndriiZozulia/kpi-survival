@@ -5,7 +5,6 @@ using System.IO;
 
 public class XMLUtil
 {
-
     public static void Serialize(object item, string path)
     {
         XmlSerializer serializer = new XmlSerializer(item.GetType());

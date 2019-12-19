@@ -3,34 +3,30 @@ using UnityEngine;
 
 public class StoryControlerManager
 {
-    private static StoryControlerManager Instance;
+    static StoryControlerManager Instance;
 
     public static StoryControlerManager GetInstance()
     {
         if (Instance == null)
         {
             Instance = new StoryControlerManager();
-            Instance.Init();
+            Instance.Load();
         }
         return Instance;
     }
 
-    private QuestEntity currQuest;
-    private uint actionIndex;
+    QuestEntity currQuest;
+    uint actionIndex;
 
-    private void Init()
+    public void Load()
     {
-        Debug.Log("StoryControlerManager -> Init()");
         currQuest = QuestManager.GetInstance().GetQuest();
         actionIndex = 0;
+
+        Debug.Log(currQuest.id);
     }
 
-    public void StartStory()
-    {
-        SetCurrActionOnScene();
-    }
-
-    private void SetCurrActionOnScene()
+    public void SetCurrActionOnScene()
     {
         if (currQuest != null)
         {
@@ -51,9 +47,19 @@ public class StoryControlerManager
         }
         else
         {
-            QuestManager.GetInstance().SetNextQuest();
-            Init();
-            StartStory();
+            int index = QuestManager.GetInstance().SetNextQuest();
+
+            if (index > 0)
+            {
+                Load();
+                SetCurrActionOnScene();
+            }
+            else
+            {
+                Debug.Log("End of storyline");
+            }
+
+            SaveManager.GetInstance().SavePlayer();
         }
     }
             

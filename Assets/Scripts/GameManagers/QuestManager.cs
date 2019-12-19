@@ -5,32 +5,38 @@ using UnityEngine;
 
 public class QuestManager 
 {
-    public static QuestManager Instance;
+    static QuestManager Instance;
 
     public static QuestManager GetInstance()
     {
         if (Instance == null)
         {
-            Instance = Load();
+            Instance = new QuestManager();
+            Instance.Load();
         }
         return Instance;
     }
 
-    [XmlElement("LastQuestID")]
     public string questID;
 
     [XmlArray("Quests"), XmlArrayItem("Quest")]
     public string[] quests;
 
-    [XmlIgnore]
-    private int _index = -1;
+    int _index = -1;
 
-    private static QuestManager Load()
+    public void Load()
     {
-        Debug.Log("QuestManager -> Init()");
         QuestManager questManager = XMLUtil.Deserialize<QuestManager>("Assets/base_mm/Quests.xml");
+
+        var savedID = SaveManager.GetInstance().GetSavedQuestID();
+        questManager.questID = savedID == null ? questManager.GetFirstQuestID() : savedID;
+
         questManager._index = Array.FindIndex(questManager.quests, element => element == questManager.questID);
-        return questManager;
+
+        quests = questManager.quests;
+        questID = questManager.questID;
+        _index = questManager._index;
+
     }
 
     public static void Save()
@@ -50,9 +56,17 @@ public class QuestManager
             return quests[_index];
         }
 
-        Debug.Log("There is no curr quest");
-        
-        return null;
+        throw new NullReferenceException();
+    }
+
+    public string GetFirstQuestID()
+    {
+        return quests[0];
+    }
+
+    public string GetLastQuestID()
+    {
+        return quests[quests.Length - 1];
     }
 
     public QuestEntity GetQuest(string findQuestID = "default")
@@ -67,7 +81,6 @@ public class QuestManager
             return XMLUtil.Deserialize<QuestEntity>("Assets/base_mm/GameStory/" + findQuestID + ".xml");
         }
 
-        Debug.Log("There is no quest with id: " + findQuestID);
         throw new NullReferenceException();
     }
 
@@ -81,16 +94,18 @@ public class QuestManager
         return GetQuest(findQuest).GetDialogEntity(dialogID);
     }
 
-    public string SetNextQuest()
+    public int SetNextQuest()
     {
-        string nextQuest = "";
         if (_index >= 0 && _index < quests.Length - 1)
         {
             _index += 1;
             questID = quests[_index];
-            nextQuest = questID;
+        }
+        else
+        {
+            _index = -1;
         }
 
-        return nextQuest;
+        return _index;
     }
 }

@@ -2,17 +2,27 @@
 
 public class GameManager
 {
-    private static GameManager Instance;
-    private QuestManager questManager;
-    private StoryControlerManager storyControler;
-    private DialogManager dialogManager;
-    private GameFieldManager gameFieldManager;
+    static GameManager Instance;
+
+    QuestManager questManager;
+    StoryControlerManager storyControler;
+    DialogManager dialogManager;
+    GameFieldManager gameFieldManager;
+    SaveManager saveManager;
 
     public static GameManager GetInstance()
     {
         if (Instance == null)
         {
             Init();
+        }
+        else
+        {
+            Instance.saveManager.Load();
+            Instance.questManager.Load();
+            Instance.dialogManager.Load();
+            Instance.storyControler.Load();
+            Instance.gameFieldManager.Load();   
         }
         return Instance;
     }
@@ -37,21 +47,26 @@ public class GameManager
         return gameFieldManager;
     }
 
+    public SaveManager GetSaveManager()
+    {
+        return saveManager;
+    }
+
     public static void Init()
     {
-        Debug.Log("GameManager -> Init()");
-        Instance = new GameManager
-        {
-            questManager = QuestManager.GetInstance(),
-            dialogManager = DialogManager.GetInstance(),
-            storyControler = StoryControlerManager.GetInstance(),
-            gameFieldManager = GameFieldManager.GetInstance()
-        };
+        Instance = new GameManager();
+        Instance.saveManager = SaveManager.GetInstance();
+        Instance.saveManager.LoadPlayer();
+        Instance.questManager = QuestManager.GetInstance();
+        Instance.dialogManager = DialogManager.GetInstance();
+        Instance.storyControler = StoryControlerManager.GetInstance();
+        Instance.gameFieldManager = GameFieldManager.GetInstance();
+
     }
 
     public void StartGame()
     {
         gameFieldManager.SetGameFieldForQuest();
-        storyControler.StartStory();
+        storyControler.SetCurrActionOnScene();
     }
 }

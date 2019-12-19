@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog3">
-  <Replics>
-    <Replica>
-      <text>TEXT_3</text>
-      <texture>/texture/path</texture>
-    </Replica>
-  </Replics>
-</DialogEntity>

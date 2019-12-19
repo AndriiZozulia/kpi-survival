@@ -4,32 +4,30 @@ using System;
 
 public class DialogManager
 {
-    private static DialogManager Instance;
+    static DialogManager Instance;
 
     public static DialogManager GetInstance()
     {
         if (Instance == null)
         {
             Instance = new DialogManager();
-            Instance.Init();
+            Instance.Load();
         }
 
         return Instance;
     }
 
-    private static GameObject dialogAction;
-    private static GameObject dialogBttn;
+    GameObject dialogAction;
+    GameObject dialogBttn;
 
-    private void Init()
+    public void Load()
     {
-        Debug.Log("DialogManager -> Init()");
         dialogBttn = FindUtil.FindIncludingInactive("DialogButton");
         dialogAction = FindUtil.FindIncludingInactive("Dialog");
     }
 
     public void StartDialogAction(string dialogID, string texture)
     {
-        Init();
         if (dialogBttn)
         {
             dialogBttn.GetComponent<Image>().sprite = Resources.Load<Sprite>(texture);
@@ -37,7 +35,6 @@ public class DialogManager
         }
         else
         {
-            Debug.Log("dialogBttn == null");
             throw new NullReferenceException();
         }
 
@@ -47,7 +44,6 @@ public class DialogManager
         }
         else
         {
-            Debug.Log("dialogAction == null");
             throw new NullReferenceException();
         }
     }
@@ -56,7 +52,7 @@ public class DialogManager
     {
         if (!dialogAction)
         {
-            Init();
+            Load();
         }
 
         return dialogAction;

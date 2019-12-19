@@ -1,17 +1,10 @@
 <?xml version="1.0"?>
 <DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog1">
   <Replics>
-    <Replica>
-      <text>TEXT_1</text>
-      <texture>/texture/path</texture>
-    </Replica>
-    <Replica>
-      <text>TEXT_1_1</text>
-      <texture>/texture/path</texture>
-    </Replica>
-    <Replica>
-      <text>TEXT_1_2</text>
-      <texture>/texture/path</texture>
-    </Replica>
+    <Replica type="phrase" text="text_1_1" texture=""/>
+    <Replica type="phrase" text="text_1_2" texture=""/>
+    <Replica type="decision" text="decision1%F#1/decision2%I#1" texture=""/>
+    <Replica type="phrase" text="text_1_3" texture=""/>
+    <Replica type="phrase" text="text_1_4" texture=""/>
   </Replics>
 </DialogEntity>

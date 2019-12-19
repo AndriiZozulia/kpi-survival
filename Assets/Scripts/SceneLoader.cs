@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using Entity;
+using System;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -17,16 +18,16 @@ public class SceneLoader : MonoBehaviour
         SaveLastScene();
 
         if (Application.CanStreamedLevelBeLoaded(sceneName))
-        { 
+        {
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
         else
         {
-            Debug.Log("Scene with name \"" + sceneName + "\" is not exist");
+            throw new NullReferenceException();
         }
     }
 
-    private void SaveLastScene()
+     void SaveLastScene()
     {
         SceneEntity sceneItem = new SceneEntity();
         sceneItem.name = SceneManager.GetActiveScene().name;

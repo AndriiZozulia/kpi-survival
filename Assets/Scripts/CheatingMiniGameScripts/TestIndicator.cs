@@ -4,9 +4,8 @@ using UnityEngine.UI;
 
 public class TestIndicator : MonoBehaviour
 {
-float time = 3.0f;
 public static bool isWatching = true;
-private bool isRunning = false;
+bool isRunning = false;
 public  GameObject testIndi;
 
     // Start is called before the first frame update

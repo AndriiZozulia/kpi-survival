@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <QuestManager xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <LastQuestID>Chapter1/Day1/Quest1</LastQuestID>
   <Quests>
     <Quest>Chapter1/Day1/Quest1</Quest>
     <Quest>Chapter1/Day1/Quest2</Quest>
-    <Quest>Chapter1/Day1/Quest2</Quest>
+    <Quest>Chapter1/Day1/Quest3</Quest>
   </Quests>
 </QuestManager>

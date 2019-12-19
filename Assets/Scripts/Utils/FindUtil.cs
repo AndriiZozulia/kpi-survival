@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class FindUtil
 {
-
     //hideously slow as it iterates all objects, so don't overuse!
     public static GameObject FindInChildrenIncludingInactive(GameObject go, string name)
     {
