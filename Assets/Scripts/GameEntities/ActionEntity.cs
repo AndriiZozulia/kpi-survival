@@ -2,6 +2,15 @@
 using System.Xml.Schema;
 using System.Xml.Serialization;
 
+public enum ActionType
+{
+    [XmlEnum(Name = "Dialog")]
+    Dialog,
+
+    [XmlEnum(Name = "MiniGame")]
+    MiniGame
+}
+
 namespace Entity
 {
     [XmlRoot("Action")]
@@ -11,7 +20,7 @@ namespace Entity
         public string id;
 
         [XmlAttribute("type")]
-        public string type;
+        public ActionType type;
 
         [XmlAttribute("path")]
         public string path;

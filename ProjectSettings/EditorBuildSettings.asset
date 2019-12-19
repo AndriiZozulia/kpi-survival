@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Saves.unity
     guid: 045fb97eb37b845ccab4b4841e71d63c
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/HiddenObject.unity
+    guid: dc73f0319900132448b27a553dffea96
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

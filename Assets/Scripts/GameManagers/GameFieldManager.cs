@@ -103,6 +103,14 @@ public class GameFieldManager
 
     void SetShowMiniGame(bool show)
     {
-        MiniGame.SetActive(show);
+        if (!MiniGame)
+        {
+            MiniGame = MiniGameManager.GetInstance().GetMiniGameAction();
+        }
+
+        if (show)
+        {
+            MiniGame.GetComponent<MiniGameAction>().StartMiniGame();
+        }
     }
 }

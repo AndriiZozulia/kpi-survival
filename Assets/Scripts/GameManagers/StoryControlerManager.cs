@@ -31,9 +31,15 @@ public class StoryControlerManager
         if (currQuest != null)
         {
             ActionEntity currAction = currQuest.actions[actionIndex];
-            if (currAction.type.Equals("Dialog"))
+
+            switch(currAction.type)
             {
-                DialogManager.GetInstance().StartDialogAction(currAction.id, currAction.texture);
+                case ActionType.Dialog:
+                    DialogManager.GetInstance().StartDialogAction(currAction.id, currAction.texture);
+                    break;
+                case ActionType.MiniGame:
+                    MiniGameManager.GetInstance().StartMiniGameAction(currAction.id, currAction.texture);
+                    break;
             }
         }
     }

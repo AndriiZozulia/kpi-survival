@@ -10,8 +10,8 @@ public class SaveManager
     const string PLAYER_SAVE_PATH = "/KpiSurvivalSave.dat";
     const string SETTINGS_SAVE_PATH = "/KpiSurvivalSettings.dat";
 
-    static SaveEntity playerSave;
-    static SettingsEntity settingsSave;
+    SaveEntity playerSave;
+    SettingsEntity settingsSave;
 
     public static SaveManager GetInstance()
     {
@@ -115,7 +115,7 @@ public class SaveManager
                     CreatePlayerSave();
                 }
                 file = File.Open(Application.persistentDataPath + PLAYER_SAVE_PATH, FileMode.Open);
-                save = bf.Deserialize(file) as SaveEntity;
+                playerSave = bf.Deserialize(file) as SaveEntity;
             }
 
             if (settingsSave.GetType().IsInstanceOfType(save))
@@ -125,7 +125,7 @@ public class SaveManager
                     CreateSettingsSave();
                 }
                 file = File.Open(Application.persistentDataPath + SETTINGS_SAVE_PATH, FileMode.Open);
-                save = bf.Deserialize(file) as SettingsEntity;
+                settingsSave = bf.Deserialize(file) as SettingsEntity;
             }
 
             Debug.Log("Load() " + save.GetType());

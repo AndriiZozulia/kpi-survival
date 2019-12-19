@@ -1,14 +1,35 @@
 ﻿using UnityEngine;
+using Entity;
 
 public class MiniGameAction : MonoBehaviour
 {
-    protected void OnStart()
+    private SceneLoader sceneLoader;
+    private MiniGameEntity miniGameEntity;
+
+    protected void Start()
+    {
+        sceneLoader = GetComponent<SceneLoader>();
+    }
+
+    public void OnStart()
     {
 
     }
 
-    protected void OnFinish()
+    public void OnFinish()
     {
+        sceneLoader.sceneName = sceneLoader.GetLastLoadedScene().name;
+        sceneLoader.LoadScene();
+    }
 
+    public void SetMiniGame(string id)
+    {
+        miniGameEntity = QuestManager.GetInstance().GetQuest().GetActionEntity(id, ActionType.MiniGame) as MiniGameEntity;
+        sceneLoader.sceneName = miniGameEntity.scene;
+    }
+
+    public void StartMiniGame()
+    {
+        sceneLoader.LoadScene();
     }
 }

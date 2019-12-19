@@ -2,8 +2,8 @@
 
 namespace Entity
 {
-    [XmlRoot("MiniGame")]
-    public class MiniGameEntity
+    [XmlRoot("MiniGameEntity")]
+    public class MiniGameEntity : ActionBaseEntity
     {
         [XmlAttribute("id")]
         public string id;
@@ -11,6 +11,7 @@ namespace Entity
         [XmlAttribute("difficulty")]
         public int difficulty;
 
-
+        [XmlAttribute("scene")]
+        public string scene;
     }
 }

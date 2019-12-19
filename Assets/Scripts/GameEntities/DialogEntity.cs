@@ -2,8 +2,10 @@
 
 namespace Entity
 {
+    public class ActionBaseEntity { }
+
     [XmlRoot("DialogEntity")]
-    public class DialogEntity
+    public class DialogEntity : ActionBaseEntity
     {
         [XmlAttribute("id")]
         public string id;

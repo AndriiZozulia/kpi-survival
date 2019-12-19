@@ -91,7 +91,7 @@ public class DialogAction : MonoBehaviour
         replicaIndex = 0;
 
         questEntity = QuestManager.GetInstance().GetQuest();
-        dialogEntity = questEntity.GetDialogEntity(dialogID);
+        dialogEntity = questEntity.GetActionEntity(dialogID, ActionType.Dialog) as DialogEntity;
     }
 
     public void UpdateReplica()

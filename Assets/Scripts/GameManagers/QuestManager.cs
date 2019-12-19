@@ -84,16 +84,6 @@ public class QuestManager
         throw new NullReferenceException();
     }
 
-    public DialogEntity GetDialogEntity(string dialogID, string findQuest = "default")
-    {
-        if (findQuest.Equals("default"))
-        {
-            return GetQuest().GetDialogEntity(dialogID);
-        }
-
-        return GetQuest(findQuest).GetDialogEntity(dialogID);
-    }
-
     public int SetNextQuest()
     {
         if (_index >= 0 && _index < quests.Length - 1)
@@ -107,5 +97,25 @@ public class QuestManager
         }
 
         return _index;
+    }
+
+    public DialogEntity GetDialogEntity(string id, string findQuest = "default")
+    {
+        if (findQuest.Equals("default"))
+        {
+            return GetQuest().GetActionEntity(id, ActionType.Dialog) as DialogEntity;
+        }
+
+        return GetQuest(findQuest).GetActionEntity(id, ActionType.Dialog) as DialogEntity;
+    }
+
+    public MiniGameEntity GetMiniGameEntity(string id, string findQuest = "default")
+    {
+        if (findQuest.Equals("default"))
+        {
+            return GetQuest().GetActionEntity(id, ActionType.MiniGame) as MiniGameEntity;
+        }
+
+        return GetQuest(findQuest).GetActionEntity(id, ActionType.MiniGame) as MiniGameEntity;
     }
 }
