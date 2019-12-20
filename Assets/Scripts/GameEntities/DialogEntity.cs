@@ -10,7 +10,7 @@ namespace Entity
         [XmlAttribute("id")]
         public string id;
 
-        [XmlElement("BGTexture")]
+        [XmlAttribute("texture")]
         public string texture;
 
         [XmlArray("Replics"), XmlArrayItem("Replica")]

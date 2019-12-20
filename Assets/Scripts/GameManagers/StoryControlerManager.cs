@@ -20,8 +20,8 @@ public class StoryControlerManager
 
     public void Load(bool loadOnInit = true)
     {
-        currQuest = QuestManager.GetInstance().GetQuest();
-        actionIndex = loadOnInit ? SaveManager.GetInstance().GetSavedActionIndex() : 0;
+        currQuest = GameManagerBehaviour.GetInstance().GetQuestManager().GetQuest();
+        actionIndex = loadOnInit ? GameManagerBehaviour.GetInstance().GetSaveManager().GetSavedActionIndex() : 0;
 
         Debug.Log(currQuest.id + " " + actionIndex);
     }
@@ -32,14 +32,32 @@ public class StoryControlerManager
         {
             ActionEntity currAction = currQuest.actions[actionIndex];
 
-            switch(currAction.type)
+            if (!currAction.skip)
             {
-                case ActionType.Dialog:
-                    DialogManager.GetInstance().StartDialogAction(currAction.id, currAction.texture);
-                    break;
-                case ActionType.MiniGame:
-                    MiniGameManager.GetInstance().StartMiniGameAction(currAction.id, currAction.texture);
-                    break;
+                switch (currAction.type)
+                {
+                    case ActionType.Dialog:
+                        GameManagerBehaviour.GetInstance().GetDialogManager().StartDialogAction(currAction.id, currAction.texture);
+                        break;
+                    case ActionType.MiniGame:
+                        GameManagerBehaviour.GetInstance().GetMiniGameManager().StartMiniGameAction(currAction.id, currAction.texture);
+                        break;
+                    case ActionType.Final:
+                        GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.Final);
+                        break;
+                }
+            }
+            else
+            {
+                switch (currAction.type)
+                {
+                    case ActionType.Dialog:
+                        GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.Dialog);
+                        break;
+                    case ActionType.MiniGame:
+                        GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.MiniGame);
+                        break;
+                }
             }
         }
     }
@@ -58,7 +76,7 @@ public class StoryControlerManager
         }
         else
         {
-            int index = QuestManager.GetInstance().SetNextQuest();
+            int index = GameManagerBehaviour.GetInstance().GetQuestManager().SetNextQuest();
 
             if (index > 0)
             {
@@ -71,7 +89,12 @@ public class StoryControlerManager
             }
         }
 
-        SaveManager.GetInstance().SavePlayer();
+        GameManagerBehaviour.GetInstance().GetSaveManager().SavePlayer();
+    }
+
+    public ActionEntity GetCurrentAction()
+    {
+        return currQuest.actions[actionIndex];
     }
             
 }

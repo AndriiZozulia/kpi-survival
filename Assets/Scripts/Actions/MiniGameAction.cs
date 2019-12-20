@@ -18,13 +18,14 @@ public class MiniGameAction : MonoBehaviour
 
     public void OnFinish()
     {
+        GameManagerBehaviour.GetInstance().GetStoryControlerManager().OnActionFinish();
         sceneLoader.sceneName = sceneLoader.GetLastLoadedScene().name;
         sceneLoader.LoadScene();
     }
 
     public void SetMiniGame(string id)
     {
-        miniGameEntity = QuestManager.GetInstance().GetQuest().GetActionEntity(id, ActionType.MiniGame) as MiniGameEntity;
+        miniGameEntity = GameManagerBehaviour.GetInstance().GetQuestManager().GetQuest().GetActionEntity(id, ActionType.MiniGame) as MiniGameEntity;
         sceneLoader.sceneName = miniGameEntity.scene;
     }
 

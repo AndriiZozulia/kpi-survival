@@ -64,7 +64,7 @@ public class MiniGameManager
 
     public void OnFinish()
     {
-        GameFieldManager.GetInstance().SetGameFieldState(GameFieldState.Quest);
-        StoryControlerManager.GetInstance().OnActionFinish();
+        GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.Quest);
+        GameManagerBehaviour.GetInstance().GetStoryControlerManager().OnActionFinish();
     }
 }

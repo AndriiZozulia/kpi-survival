@@ -7,10 +7,10 @@ public class ActionButton : ActionButtonBaseHandler
         switch (type)
         {
             case ActionType.Dialog:
-                GameFieldManager.GetInstance().SetGameFieldState(GameFieldState.Dialog);
+                GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.Dialog);
                 break;
             case ActionType.MiniGame:
-                GameFieldManager.GetInstance().SetGameFieldState(GameFieldState.MiniGame);
+                GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.MiniGame);
                 break;
         }
 

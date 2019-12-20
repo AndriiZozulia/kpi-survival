@@ -36,9 +36,9 @@ namespace Entity
         {
             SaveEntity save = new SaveEntity
             {
-                _questID = newSave ? QuestManager.GetFirstQuestID() : QuestManager.GetInstance().GetCurrQuestID(),
-                _ratingEntity = newSave ? new RatingEntity() : RatingManager.GetInstance().GetRating(),
-                _actionIndex = newSave ?  0 : StoryControlerManager.GetInstance().GetActionIndex()
+                _questID = newSave ? QuestManager.GetFirstQuestID() : GameManagerBehaviour.GetInstance().GetQuestManager().GetCurrQuestID(),
+                _ratingEntity = newSave ? new RatingEntity() : GameManagerBehaviour.GetInstance().GetRatingManager().GetRating(),
+                _actionIndex = newSave ?  0 : GameManagerBehaviour.GetInstance().GetStoryControlerManager().GetActionIndex()
             };
 
             return save;

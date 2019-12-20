@@ -10,7 +10,7 @@ public class ActionButtonSkip : ActionButtonBaseHandler
         switch (type)
         {
             case "Dialog":
-                DialogManager.GetInstance().OnFinish();
+                GameManagerBehaviour.GetInstance().GetDialogManager().OnFinish();
                 break;
             case "MiniGame":break;
         }

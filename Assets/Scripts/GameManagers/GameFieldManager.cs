@@ -6,7 +6,8 @@ public enum GameFieldState
 {
     Dialog,
     Quest,
-    MiniGame
+    MiniGame,
+    Final
 }
 
 public class GameFieldManager
@@ -33,7 +34,7 @@ public class GameFieldManager
 
     public void Load()
     {
-        currQuest = QuestManager.GetInstance().GetQuest();
+        currQuest = GameManagerBehaviour.GetInstance().GetQuestManager().GetQuest();
         currState = GameFieldState.Quest;
     }
 
@@ -42,7 +43,7 @@ public class GameFieldManager
         Background = FindUtil.FindIncludingInactive("Background");
         if (Background)
         {
-            Background.GetComponent<Image>().sprite = Resources.Load<Sprite>(GetInstance().currQuest.background);
+            Background.GetComponent<Image>().sprite = Resources.Load<Sprite>(currQuest.background);
             Background.SetActive(true);
         }
     }
@@ -61,6 +62,11 @@ public class GameFieldManager
             case GameFieldState.Quest:
                 SetShowUI(true);
                 break;
+            case GameFieldState.Final:
+                SetShowUI(true);
+                SetShowFinal(true);
+                break;
+
         }
         currState = state;
     }
@@ -77,6 +83,10 @@ public class GameFieldManager
                 break;
             case GameFieldState.Quest:
                 SetShowUI(false);
+                break;
+            case GameFieldState.Final:
+                SetShowUI(false);
+                SetShowFinal(false);
                 break;
         }
     }
@@ -95,7 +105,7 @@ public class GameFieldManager
     {
         if (!Dialog)
         {
-            Dialog = DialogManager.GetInstance().GetDialogAction();
+            Dialog = GameManagerBehaviour.GetInstance().GetDialogManager().GetDialogAction();
         }
 
         Dialog.SetActive(show);
@@ -105,12 +115,22 @@ public class GameFieldManager
     {
         if (!MiniGame)
         {
-            MiniGame = MiniGameManager.GetInstance().GetMiniGameAction();
+            MiniGame = GameManagerBehaviour.GetInstance().GetMiniGameManager().GetMiniGameAction();
         }
 
         if (show)
         {
             MiniGame.GetComponent<MiniGameAction>().StartMiniGame();
+        }
+    }
+
+    void SetShowFinal(bool show)
+    {
+        Background = FindUtil.FindIncludingInactive("Background");
+        if (Background)
+        {
+            Background.GetComponent<Image>().sprite = Resources.Load<Sprite>(StoryControlerManager.GetInstance().GetCurrentAction().texture);
+            Background.SetActive(show);
         }
     }
 }

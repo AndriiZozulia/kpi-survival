@@ -6,7 +6,7 @@ public class ActionButtonSave : ActionButtonBaseHandler
     {
         if (reset.Reseted())
         {
-            SaveManager.GetInstance().CreatePlayerSave();
+            GameManagerBehaviour.GetInstance().GetSaveManager().CreatePlayerSave();
         }
     }
 }

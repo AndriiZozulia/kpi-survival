@@ -33,7 +33,7 @@ public class QuestManager
     {
         QuestManager questManager = XMLUtil.Deserialize<QuestManager>(Path.Combine(basePath, "Quests.xml"));
 
-        var savedID = SaveManager.GetInstance().GetSavedQuestID();
+        var savedID = GameManagerBehaviour.GetInstance().GetSaveManager().GetSavedQuestID();
         questManager.questID = savedID ?? questManager.quests[0];
         questManager._index = Array.FindIndex(questManager.quests, element => element == questManager.questID);
 

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog1">
   <Replics>
-    <Replica type="phrase" text="text_1_1" texture=""/>
-    <Replica type="phrase" text="text_1_2" texture=""/>
-    <Replica type="decision" text="decision1%F#1/decision2%I#1" texture=""/>
-    <Replica type="phrase" text="text_1_3" texture=""/>
-    <Replica type="phrase" text="text_1_4" texture=""/>
+    <Replica type="phrase" text="Хаю хай, вертальот!" texture=""/>
+    <Replica type="phrase" text="А ти думав тут нормальні люди вчаться?" texture=""/>
+    <Replica type="decision" text="Ну да!%F#1/Гииииииии, кочалочка%I#1" texture=""/>
+    <Replica type="phrase" text="Мда, з кожним роком все гірше і гірше" texture=""/>
+    <Replica type="phrase" text="Ладно, салага, глянемо на що ти здатний" texture=""/>
   </Replics>
 </DialogEntity>

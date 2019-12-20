@@ -61,7 +61,7 @@ public class DecisionHandler : MonoBehaviour
 
         if (dialog)
         {
-            RatingManager.GetInstance().Add(_rating, _ratingValue);
+            GameManagerBehaviour.GetInstance().GetRatingManager().Add(_rating, _ratingValue);
             dialog.UpdateReplica();
         }
         else

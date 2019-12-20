@@ -3,5 +3,6 @@
   <Actions>
     <Action id="Dialog1" type="Dialog" path="Dialog1.xml" texture="UI/Buttons/ButtonsStyle13_02" />
     <Action id="MiniGameHO" type="MiniGame" path="MiniGameHO.xml" texture="UI/Buttons/ButtonsStyle13_06" />
+    <Action id="Final" type="Final" path="" texture="UI/final" />
   </Actions>
 </Quest>

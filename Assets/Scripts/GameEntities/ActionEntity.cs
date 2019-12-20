@@ -8,7 +8,10 @@ public enum ActionType
     Dialog,
 
     [XmlEnum(Name = "MiniGame")]
-    MiniGame
+    MiniGame,
+
+    [XmlEnum(Name = "Final")]
+    Final
 }
 
 namespace Entity
@@ -27,5 +30,8 @@ namespace Entity
 
         [XmlAttribute("texture")]
         public string texture;
+
+        [XmlAttribute("skip")]
+        public bool skip;
     }
 }

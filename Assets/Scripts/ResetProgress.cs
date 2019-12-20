@@ -11,7 +11,7 @@ public class ResetProgress : MonoBehaviour
     void Start()
     {
         reseted = false;
-        var rating = SaveManager.GetInstance().GetRating();
+        var rating = GameManagerBehaviour.GetInstance().GetSaveManager().GetRating();
         intelligence.text = rating.intelligence.ToString();
         force.text = rating.force.ToString();
     }

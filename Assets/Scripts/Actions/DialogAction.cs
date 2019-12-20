@@ -9,6 +9,7 @@ public class DialogAction : MonoBehaviour
     public Text text;
     public Text decision_1;
     public Text decision_2;
+    public Image image;
 
     bool isDecision;
 
@@ -21,11 +22,23 @@ public class DialogAction : MonoBehaviour
         dialogID = newDialogID;
         Init();
 
+        SetBackground();
+
         text.gameObject.SetActive(false);
         decision_1.gameObject.SetActive(false);
         decision_2.gameObject.SetActive(false);
 
         UpdateText();
+    }
+
+    public void SetBackground()
+    {
+        var Background = FindUtil.FindIncludingInactive("Background");
+        if (Background)
+        {
+            Background.GetComponent<Image>().sprite = Resources.Load<Sprite>(dialogEntity.texture);
+            Background.SetActive(true);
+        }
     }
 
     void UpdateText()
@@ -34,6 +47,10 @@ public class DialogAction : MonoBehaviour
 
         if (replica != null)
         {
+            image.sprite = Resources.Load<Sprite>(replica.texture);
+            var rect = image.sprite.rect;
+            image.transform.localScale = new Vector3(rect.width / 100.0f, rect.height / 100.0f, 0);
+
             if (replica.type.Equals("phrase"))
             {
                 isDecision = false;
@@ -83,14 +100,14 @@ public class DialogAction : MonoBehaviour
         decision_2.gameObject.SetActive(false);
 
         gameObject.SetActive(false);
-        DialogManager.GetInstance().OnFinish();
+        GameManagerBehaviour.GetInstance().GetDialogManager().OnFinish();
     }
 
     void Init()
     {
         replicaIndex = 0;
 
-        questEntity = QuestManager.GetInstance().GetQuest();
+        questEntity = GameManagerBehaviour.GetInstance().GetQuestManager().GetQuest();
         dialogEntity = questEntity.GetActionEntity(dialogID, ActionType.Dialog) as DialogEntity;
     }
 

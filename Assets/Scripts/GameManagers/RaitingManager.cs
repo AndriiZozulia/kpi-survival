@@ -25,7 +25,7 @@ public class RatingManager
 
     public void Load()
     {
-        ratingEntity = SaveManager.GetInstance().GetRating();
+        ratingEntity = GameManagerBehaviour.GetInstance().GetSaveManager().GetRating();
         if (ratingEntity == null)
         {
             ratingEntity = new RatingEntity();
