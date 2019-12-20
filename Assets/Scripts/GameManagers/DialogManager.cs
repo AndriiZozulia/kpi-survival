@@ -31,6 +31,10 @@ public class DialogManager
         if (dialogBttn)
         {
             dialogBttn.GetComponent<Image>().sprite = Resources.Load<Sprite>(texture);
+
+            var rect = dialogBttn.GetComponent<Image>().sprite.rect;
+            dialogBttn.transform.localScale = new Vector3(rect.width / 100.0f, rect.height / 100.0f, 0);
+
             dialogBttn.SetActive(true);
         }
         else

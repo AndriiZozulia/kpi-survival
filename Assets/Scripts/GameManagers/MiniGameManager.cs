@@ -31,6 +31,10 @@ public class MiniGameManager
         if (miniGameBttn)
         {
             miniGameBttn.GetComponent<Image>().sprite = Resources.Load<Sprite>(texture);
+
+            var rect = miniGameBttn.GetComponent<Image>().sprite.rect;
+            miniGameBttn.transform.localScale = new Vector3(rect.width / 100.0f, rect.height / 100.0f, 0);
+
             miniGameBttn.SetActive(true);
         }
         else
