@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
-<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog1">
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog1" texture="Backgrounds/18corp">
   <Replics>
-    <Replica type="phrase" text="Хаю хай, вертальот!" texture=""/>
-    <Replica type="phrase" text="А ти думав тут нормальні люди вчаться?" texture=""/>
-    <Replica type="decision" text="Ну да!%F#1/Гииииииии, кочалочка%I#1" texture=""/>
-    <Replica type="phrase" text="Мда, з кожним роком все гірше і гірше" texture=""/>
-    <Replica type="phrase" text="Ладно, салага, глянемо на що ти здатний" texture=""/>
-  </Replics>
-</DialogEntity>
+
+    <Replica type="phrase" text="Вот и мой первый день в КПИ." texture=""/>
+    <Replica type="phrase" text="Трудно поверить, что еще вчера я был в родном Задрупинске на Амуре !" texture=""/>
+    <Replica type="phrase" text="Интересно как там мой родной город?" texture=""/>
+</Replics>
+</DialogEntity> 
