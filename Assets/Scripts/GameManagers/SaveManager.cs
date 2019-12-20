@@ -2,6 +2,13 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using Entity;
+
+public enum SaveType
+{
+    Player,
+    Settings
+}
 
 public class SaveManager
 {
@@ -22,37 +29,21 @@ public class SaveManager
         return Instance;
     }
 
-    public void LoadPlayer()
-    {
-        playerSave = new SaveEntity();
-        Load(playerSave);
-    }
-
-    public void LoadSettings()
-    {
-        settingsSave = new SettingsEntity();
-        Load(settingsSave);
-    }
-
     public void Load()
     {
-        playerSave = new SaveEntity();
-        settingsSave = new SettingsEntity();
-        Load(playerSave);
-        Load(settingsSave);
     }
 
     public void SavePlayer()
     {
-        Save(playerSave);
+        Save(SaveType.Player);
     }
 
     public void SaveSettings()
     {
-        Save(settingsSave);
+        Save(SaveType.Settings);
     }
 
-    public void Save(BaseSaveEntity save, bool kill = false)
+    private void Save(SaveType type, bool newSave = false)
     {
         FileStream file = null;
 
@@ -60,35 +51,34 @@ public class SaveManager
         {
             BinaryFormatter bf = new BinaryFormatter();
             
-            if (playerSave.GetType().IsInstanceOfType(save))
+            if (type == SaveType.Player)
             {
-                if (!kill)
-                {
-                    save = new SaveEntity(QuestManager.GetInstance().GetCurrQuestID(), RatingManager.GetInstance().Getrating());
-                }
+                playerSave = SaveEntity.CreateSave(newSave);
                 file = File.Create(Application.persistentDataPath + PLAYER_SAVE_PATH);
 
-                bf.Serialize(file, save);
+                bf.Serialize(file, playerSave);
+
+                Debug.Log("Save() Player");
             }
 
-            if (settingsSave.GetType().IsInstanceOfType(save))
+            if (type == SaveType.Settings)
             {
-                if (!kill)
+                if (!newSave)
                 {
-                    save = new SettingsEntity();
+                    settingsSave = new SettingsEntity();
                 }
                 file = File.Create(Application.persistentDataPath + SETTINGS_SAVE_PATH);
 
-                bf.Serialize(file, save);
-            }
+                bf.Serialize(file, settingsSave);
 
-            Debug.Log("Save() " + save.GetType());
+                Debug.Log("Save() Settings");
+            }
         }
         catch(Exception e)
         {
             if (e != null)
             {
-                //handle
+                Debug.LogAssertion(e.Message);
             }
         }
         finally
@@ -100,7 +90,7 @@ public class SaveManager
         }
     }
 
-    public void Load(BaseSaveEntity save)
+    public void Load(SaveType type)
     {
         FileStream file = null;
 
@@ -108,33 +98,36 @@ public class SaveManager
         {
             BinaryFormatter bf = new BinaryFormatter();
 
-            if (playerSave.GetType().IsInstanceOfType(save))
+            string savePath = Application.persistentDataPath;
+
+            if (type == SaveType.Player)
             {
-                if (!File.Exists(Application.persistentDataPath + PLAYER_SAVE_PATH))
+                if (!File.Exists(savePath + PLAYER_SAVE_PATH))
                 {
                     CreatePlayerSave();
                 }
-                file = File.Open(Application.persistentDataPath + PLAYER_SAVE_PATH, FileMode.Open);
+                file = File.Open(savePath + PLAYER_SAVE_PATH, FileMode.Open);
                 playerSave = bf.Deserialize(file) as SaveEntity;
+
+                Debug.Log("Load() Player");
             }
 
-            if (settingsSave.GetType().IsInstanceOfType(save))
+            if (type == SaveType.Settings)
             {
-                if (!File.Exists(Application.persistentDataPath + SETTINGS_SAVE_PATH))
+                if (!File.Exists(savePath + SETTINGS_SAVE_PATH))
                 {
                     CreateSettingsSave();
                 }
-                file = File.Open(Application.persistentDataPath + SETTINGS_SAVE_PATH, FileMode.Open);
+                file = File.Open(savePath + SETTINGS_SAVE_PATH, FileMode.Open);
                 settingsSave = bf.Deserialize(file) as SettingsEntity;
+                Debug.Log("Load() Settings");
             }
-
-            Debug.Log("Load() " + save.GetType());
         }
         catch (Exception e)
         {
             if (e != null)
             {
-                Debug.LogAssertion("SAVE NOT LOADED");
+                Debug.LogAssertion(e.Message);
             }
         }
         finally
@@ -148,21 +141,19 @@ public class SaveManager
 
     public void CreatePlayerSave()
     {
-        playerSave = new SaveEntity(QuestManager.GetInstance().GetFirstQuestID(), new RatingEntity());
-        Save(playerSave, true);
+        Save(SaveType.Player, true);
     }
 
     public void CreateSettingsSave()
     {
-        settingsSave = new SettingsEntity();
-        Save(settingsSave, true);
+        Save(SaveType.Settings, true);
     }
 
     public RatingEntity GetRating()
     {
         if (playerSave == null)
         {
-            Load();
+            Load(SaveType.Player);
         }
 
         return playerSave.GetRating();
@@ -172,9 +163,19 @@ public class SaveManager
     {
         if (playerSave == null)
         {
-            Load();
+            Load(SaveType.Player);
         }
 
         return playerSave.GetQuestID();
+    }
+
+    public int GetSavedActionIndex()
+    {
+        if (playerSave == null)
+        {
+            Load(SaveType.Player);
+        }
+
+        return playerSave.GetActionIndex();
     }
 }

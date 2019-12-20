@@ -2,10 +2,22 @@
 using System.Xml.Serialization;
 using Entity;
 using UnityEngine;
+using System.IO;
 
 public class QuestManager 
 {
     static QuestManager Instance;
+
+    private const string basePath = "Assets/base_mm/";
+
+    public string questID;
+
+    [XmlArray("Quests"), XmlArrayItem("Quest")]
+    public string[] quests;
+
+    int _index = -1;
+
+    QuestEntity questEntity;
 
     public static QuestManager GetInstance()
     {
@@ -17,31 +29,24 @@ public class QuestManager
         return Instance;
     }
 
-    public string questID;
-
-    [XmlArray("Quests"), XmlArrayItem("Quest")]
-    public string[] quests;
-
-    int _index = -1;
-
     public void Load()
     {
-        QuestManager questManager = XMLUtil.Deserialize<QuestManager>("Assets/base_mm/Quests.xml");
+        QuestManager questManager = XMLUtil.Deserialize<QuestManager>(Path.Combine(basePath, "Quests.xml"));
 
         var savedID = SaveManager.GetInstance().GetSavedQuestID();
-        questManager.questID = savedID == null ? questManager.GetFirstQuestID() : savedID;
-
+        questManager.questID = savedID ?? questManager.quests[0];
         questManager._index = Array.FindIndex(questManager.quests, element => element == questManager.questID);
 
         quests = questManager.quests;
         questID = questManager.questID;
         _index = questManager._index;
 
+        Debug.Log(questID + " " + questID.Length + " " + _index);
     }
 
     public static void Save()
     {
-        XMLUtil.Serialize(Instance, "Assets/base_mm/Quests.xml");
+        XMLUtil.Serialize(Instance, (Path.Combine(basePath, "Quests.xml")));
     }
 
     public string GetCurrQuestID()
@@ -51,7 +56,7 @@ public class QuestManager
             _index = Array.FindIndex(quests, element => element == questID);
         }
 
-        if (_index > 0)
+        if (_index >= 0)
         {
             return quests[_index];
         }
@@ -59,9 +64,9 @@ public class QuestManager
         throw new NullReferenceException();
     }
 
-    public string GetFirstQuestID()
+    public static string GetFirstQuestID()
     {
-        return quests[0];
+        return XMLUtil.Deserialize<QuestManager>(Path.Combine(basePath, "Quests.xml")).quests[0];
     }
 
     public string GetLastQuestID()
@@ -76,11 +81,10 @@ public class QuestManager
             findQuestID = questID;
         }
 
-        if (Array.FindIndex(Instance.quests, element => element == findQuestID) != -1)
+        if (Array.FindIndex(quests, element => element == findQuestID) != -1)
         {
-            return XMLUtil.Deserialize<QuestEntity>("Assets/base_mm/GameStory/" + findQuestID + ".xml");
+            return XMLUtil.Deserialize<QuestEntity>(Path.Combine(basePath, "GameStory", findQuestID + ".xml"));
         }
-
         throw new NullReferenceException();
     }
 
@@ -90,6 +94,7 @@ public class QuestManager
         {
             _index += 1;
             questID = quests[_index];
+            questEntity = GetQuest();
         }
         else
         {

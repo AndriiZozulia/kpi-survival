@@ -8,10 +8,7 @@ public class Loader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var saveManager = SaveManager.GetInstance();
-        //saveManager.CreatePlayerSave();
-        saveManager.LoadSettings();
-
+        //SaveManager.GetInstance().CreatePlayerSave();
         /* 
        DialogEntity dialog = new DialogEntity
        {

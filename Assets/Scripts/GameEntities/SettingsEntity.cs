@@ -1,10 +1,9 @@
 ﻿using System;
 
-[Serializable]
-public class SettingsEntity : BaseSaveEntity
+namespace Entity
 {
-    public SettingsEntity()
+    [Serializable]
+    public class SettingsEntity : BaseSaveEntity
     {
-    
     }
 }

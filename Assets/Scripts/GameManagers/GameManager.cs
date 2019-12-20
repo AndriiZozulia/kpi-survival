@@ -9,6 +9,7 @@ public class GameManager
     DialogManager dialogManager;
     GameFieldManager gameFieldManager;
     SaveManager saveManager;
+    MiniGameManager miniGameManager;
 
     public static GameManager GetInstance()
     {
@@ -18,11 +19,12 @@ public class GameManager
         }
         else
         {
-            Instance.saveManager.Load();
+            Instance.saveManager.Load(SaveType.Player);
             Instance.questManager.Load();
             Instance.dialogManager.Load();
+            Instance.miniGameManager.Load();
             Instance.storyControler.Load();
-            Instance.gameFieldManager.Load();   
+            Instance.gameFieldManager.Load();
         }
         return Instance;
     }
@@ -56,12 +58,12 @@ public class GameManager
     {
         Instance = new GameManager();
         Instance.saveManager = SaveManager.GetInstance();
-        Instance.saveManager.LoadPlayer();
+        Instance.saveManager.Load(SaveType.Player);
         Instance.questManager = QuestManager.GetInstance();
         Instance.dialogManager = DialogManager.GetInstance();
+        Instance.miniGameManager = MiniGameManager.GetInstance();
         Instance.storyControler = StoryControlerManager.GetInstance();
         Instance.gameFieldManager = GameFieldManager.GetInstance();
-
     }
 
     public void StartGame()

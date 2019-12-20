@@ -1,5 +1,6 @@
 ﻿using System.Xml.Serialization;
 using System;
+using System.IO;
 
 namespace Entity
 {
@@ -20,7 +21,7 @@ namespace Entity
 
         public string GetQuestPath()
         {
-            return "Assets/base_mm/GameStory/" + day + "/" + id + ".xml";
+            return Path.Combine("Assets/base_mm/GameStory", day, id + ".xml");
         }
 
         public string GetActionPath(int index, ActionType type)
@@ -34,11 +35,11 @@ namespace Entity
                 string typePath = "";
                 switch (type)
                 {
-                    case ActionType.Dialog: typePath = "/Dialogs/"; break;
-                    case ActionType.MiniGame: typePath = "/MiniGames/"; break;
+                    case ActionType.Dialog: typePath = "Dialogs"; break;
+                    case ActionType.MiniGame: typePath = "MiniGames"; break;
                 }
 
-                path = "Assets/base_mm/GameStory/" + day + typePath + actions[index].path;
+                path = Path.Combine("Assets/base_mm/GameStory", day, typePath, actions[index].path);
             }
             else
             {

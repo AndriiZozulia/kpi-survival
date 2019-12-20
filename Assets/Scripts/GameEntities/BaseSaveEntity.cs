@@ -1,7 +1,10 @@
 ﻿using System;
 
-[Serializable]
-public class BaseSaveEntity
+namespace Entity
 {
-    
+    [Serializable]
+    public class BaseSaveEntity
+    {
+
+    }
 }

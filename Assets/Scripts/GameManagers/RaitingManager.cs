@@ -32,7 +32,7 @@ public class RatingManager
         }
     }
 
-    public RatingEntity Getrating()
+    public RatingEntity GetRating()
     {
         return ratingEntity;
     }

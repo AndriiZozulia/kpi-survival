@@ -16,14 +16,14 @@ public class StoryControlerManager
     }
 
     QuestEntity currQuest;
-    uint actionIndex;
+    int actionIndex;
 
-    public void Load()
+    public void Load(bool loadOnInit = true)
     {
         currQuest = QuestManager.GetInstance().GetQuest();
-        actionIndex = 0;
+        actionIndex = loadOnInit ? SaveManager.GetInstance().GetSavedActionIndex() : 0;
 
-        Debug.Log(currQuest.id);
+        Debug.Log(currQuest.id + " " + actionIndex);
     }
 
     public void SetCurrActionOnScene()
@@ -44,6 +44,11 @@ public class StoryControlerManager
         }
     }
 
+    public int GetActionIndex()
+    {
+        return actionIndex;
+    }
+
     public void OnActionFinish()
     {
         if (actionIndex < currQuest.actions.Length - 1)
@@ -57,16 +62,16 @@ public class StoryControlerManager
 
             if (index > 0)
             {
-                Load();
+                Load(false);
                 SetCurrActionOnScene();
             }
             else
             {
                 Debug.Log("End of storyline");
             }
-
-            SaveManager.GetInstance().SavePlayer();
         }
+
+        SaveManager.GetInstance().SavePlayer();
     }
             
 }
