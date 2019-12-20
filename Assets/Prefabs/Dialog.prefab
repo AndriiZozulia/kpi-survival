@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1354179786811715977}
   - component: {fileID: 1858633723685499852}
   - component: {fileID: 6009198676341979469}
-  - component: {fileID: 809016532090672242}
   - component: {fileID: 8853303229014605430}
   m_Layer: 5
   m_Name: Decision_2
@@ -37,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 770, y: 40}
+  m_AnchoredPosition: {x: 0, y: -70}
+  m_SizeDelta: {x: 1500, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1354179786811715977
 CanvasRenderer:
@@ -68,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83b005045226f49a5b76989eab9a120f, type: 3}
-    m_FontSize: 22
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -104,21 +103,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 770, y: 40}
+  m_Size: {x: 1500, y: 70}
   m_EdgeRadius: 0
---- !u!114 &809016532090672242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025588648705359473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1db89466ab8240b6ac9e7261c968763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaleStep: 0.05
 --- !u!114 &8853303229014605430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +157,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -500}
-  m_SizeDelta: {x: 800, y: 200}
+  m_SizeDelta: {x: 1600, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1674434832362793049
 CanvasRenderer:
@@ -299,7 +285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: 130}
+  m_AnchoredPosition: {x: 700, y: 130}
   m_SizeDelta: {x: 130, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4057579464046945288
@@ -408,7 +394,6 @@ GameObject:
   - component: {fileID: 7399068340618860175}
   - component: {fileID: 8658151355819815144}
   - component: {fileID: 7549598406602090754}
-  - component: {fileID: 7160144554383920787}
   - component: {fileID: 3657270218858311432}
   m_Layer: 5
   m_Name: Decision_1
@@ -433,8 +418,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 25}
-  m_SizeDelta: {x: 770, y: 40}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 1500, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7399068340618860175
 CanvasRenderer:
@@ -464,7 +449,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83b005045226f49a5b76989eab9a120f, type: 3}
-    m_FontSize: 22
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -500,21 +485,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 770, y: 40}
+  m_Size: {x: 1500, y: 70}
   m_EdgeRadius: 0
---- !u!114 &7160144554383920787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5614929945460575611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1db89466ab8240b6ac9e7261c968763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaleStep: 0.05
 --- !u!114 &3657270218858311432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,7 +535,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 770, y: 100}
+  m_SizeDelta: {x: 1500, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &341610388962839148
 CanvasRenderer:
@@ -593,7 +565,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83b005045226f49a5b76989eab9a120f, type: 3}
-    m_FontSize: 22
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -705,7 +677,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 800, y: 370}
+  m_Size: {x: 1600, y: 900}
   m_EdgeRadius: 0
 --- !u!114 &3551465566282527602
 MonoBehaviour:
