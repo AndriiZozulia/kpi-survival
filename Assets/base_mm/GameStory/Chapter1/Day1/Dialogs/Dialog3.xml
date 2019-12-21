@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog3" texture = "Backgrounds/18corp">
+  <Replics>
+    <Replica type="phrase" text="Мда..." texture=""/>
+    <Replica type="phrase" text="Всё-таки хорошо, что я с ним расстался" texture=""/>
+    
+  </Replics>
+</DialogEntity>
