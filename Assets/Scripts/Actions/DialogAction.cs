@@ -47,9 +47,13 @@ public class DialogAction : MonoBehaviour
 
         if (replica != null)
         {
-            image.sprite = Resources.Load<Sprite>(replica.texture);
-            var rect = image.sprite.rect;
-            image.transform.localScale = new Vector3(rect.width / 100.0f, rect.height / 100.0f, 0);
+            var sprite = Resources.Load<Sprite>(replica.texture);
+            if (sprite)
+            {
+                image.sprite = sprite;
+                var rect = image.sprite.rect;
+                image.transform.localScale = new Vector3(rect.width / 100.0f, rect.height / 100.0f, 0);
+            }
 
             if (replica.type.Equals("phrase"))
             {

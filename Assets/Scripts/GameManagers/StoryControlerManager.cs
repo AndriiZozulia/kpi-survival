@@ -32,33 +32,19 @@ public class StoryControlerManager
         {
             ActionEntity currAction = currQuest.actions[actionIndex];
 
-            if (!currAction.skip)
+            switch (currAction.type)
             {
-                switch (currAction.type)
-                {
-                    case ActionType.Dialog:
-                        GameManagerBehaviour.GetInstance().GetDialogManager().StartDialogAction(currAction.id, currAction.texture);
-                        break;
-                    case ActionType.MiniGame:
-                        GameManagerBehaviour.GetInstance().GetMiniGameManager().StartMiniGameAction(currAction.id, currAction.texture);
-                        break;
-                    case ActionType.Final:
-                        GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.Final);
-                        break;
-                }
+                case ActionType.Dialog:
+                    GameManagerBehaviour.GetInstance().GetDialogManager().StartDialogAction(currAction.id, currAction.texture, currAction.skip);
+                    break;
+                case ActionType.MiniGame:
+                    GameManagerBehaviour.GetInstance().GetMiniGameManager().StartMiniGameAction(currAction.id, currAction.texture, currAction.skip);
+                    break;
+                case ActionType.Final:
+                    GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.Final);
+                    break;
             }
-            else
-            {
-                switch (currAction.type)
-                {
-                    case ActionType.Dialog:
-                        GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.Dialog);
-                        break;
-                    case ActionType.MiniGame:
-                        GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.MiniGame);
-                        break;
-                }
-            }
+
         }
     }
 

@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog1" texture="Backgrounds/18corp">
-  <Replics>
-
-    <Replica type="phrase" text="Вот и мой первый день в КПИ." texture=""/>
-    <Replica type="phrase" text="Трудно поверить, что еще вчера я был в родном Задрупинске на Амуре !" texture=""/>
-    <Replica type="phrase" text="Интересно как там мой родной город?" texture=""/>
-</Replics>
+  	<Replics>
+	    <Replica type="phrase" text="Вот и мой первый день в КПИ." texture=""/>
+	    <Replica type="phrase" text="Трудно поверить, что еще вчера я был в родном Задрупинске на Амуре !" texture=""/>
+	    <Replica type="phrase" text="Интересно как там мой родной город?" texture=""/>
+	</Replics>
 </DialogEntity> 
