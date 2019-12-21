@@ -37,12 +37,16 @@ public class MiniGameManager
 
         if (miniGameBttn)
         {
-            miniGameBttn.GetComponent<Image>().sprite = Resources.Load<Sprite>(action.texture);
+            var sprite = Resources.Load<Sprite>(action.texture);
+            if (sprite)
+            {
+                miniGameBttn.GetComponent<Image>().sprite = Resources.Load<Sprite>(action.texture);
 
-            var rect = miniGameBttn.GetComponent<Image>().sprite.rect;
-            miniGameBttn.transform.localScale = new Vector3(rect.width / 100.0f, rect.height / 100.0f, 0);
-            miniGameBttn.transform.position = new Vector3(action.x, action.y, 0);
-            miniGameBttn.SetActive(!action.skip);
+                var rect = miniGameBttn.GetComponent<Image>().sprite.rect;
+                miniGameBttn.transform.localScale = new Vector3(rect.width / 100.0f, rect.height / 100.0f, 0);
+                miniGameBttn.transform.position = new Vector3(action.x, action.y, 0);
+                miniGameBttn.SetActive(!action.skip);
+            }
         }
         else
         {

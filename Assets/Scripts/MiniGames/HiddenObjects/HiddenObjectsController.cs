@@ -8,7 +8,7 @@ public class HiddenObjectsController : MonoBehaviour
 	[SerializeField] private Text uiTimer;
 	[SerializeField] private Text uiScore;
 	[SerializeField] private float mainTimer;
-	public GameObject ScoreObj;
+	
 
     private static int numberOfObjects=6;
     public static int foundObjects = 0;

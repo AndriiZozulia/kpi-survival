@@ -56,11 +56,12 @@ public class DialogManager
 
         if (dialogAction)
         {
+            var dialog = dialogAction.GetComponent<DialogAction>();
+            dialog.SetDialog(action.id);
+
             if (action.skip)
             {
                 GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.Dialog);
-                var dialog = dialogAction.GetComponent<DialogAction>();
-                dialog.SetDialog(action.id);
                 dialog.SetBackground();
             }
         }

@@ -166,7 +166,6 @@ MonoBehaviour:
   uiTimer: {fileID: 1798836356}
   uiScore: {fileID: 1439949554}
   mainTimer: 31
-  ScoreObj: {fileID: 0}
 --- !u!1 &4574987
 GameObject:
   m_ObjectHideFlags: 0

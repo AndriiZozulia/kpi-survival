@@ -107,13 +107,12 @@ public class GameFieldManager
         {
             Dialog = GameManagerBehaviour.GetInstance().GetDialogManager().GetDialogAction();
         }
+        Dialog.SetActive(show);
 
         if (show)
         {
             Dialog.GetComponent<DialogAction>().SetBackground();
         }
-
-        Dialog.SetActive(show);
     }
 
     void SetShowMiniGame(bool show)
