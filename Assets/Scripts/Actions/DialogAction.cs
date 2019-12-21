@@ -34,8 +34,12 @@ public class DialogAction : MonoBehaviour
         var Background = FindUtil.FindIncludingInactive("Background");
         if (Background)
         {
-            Background.GetComponent<Image>().sprite = Resources.Load<Sprite>(dialogEntity.texture);
-            Background.SetActive(true);
+            var sprite = Resources.Load<Sprite>(dialogEntity.texture);
+            if (sprite)
+            {
+                Background.GetComponent<Image>().sprite = sprite;
+                Background.SetActive(true);
+            }
         }
     }
 
