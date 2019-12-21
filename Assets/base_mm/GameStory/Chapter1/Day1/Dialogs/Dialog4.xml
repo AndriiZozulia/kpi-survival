@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog4" texture = "Backgrounds/Turniket">
+  <Replics>
+    <Replica type="phrase" text="Оу, это что?" texture=""/>
+    <Replica type="phrase" text="Турникеты?" texture=""/>
+    <Replica type="phrase" text="Я читал про них в интернете…" texture=""/>
+    <Replica type="phrase" text="Наверно дорого стоят, но можно не переживать за ноутбук!/n(Но это не точно)" texture=""/>
+    <Replica type="phrase" text="Судя по всему, ребята прикладывают студенческие билеты." texture=""/>
+    <Replica type="phrase" text="У меня его еще нет.Скорее всего женщины на вахте сможет меня пропустить." texture=""/>
+  </Replics>
+</DialogEntity>

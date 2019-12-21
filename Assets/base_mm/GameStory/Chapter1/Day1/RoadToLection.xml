@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Quest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="RoadToLection" day="Chapter1/Day1" background="Backgrounds/Vaxta" >
+  <Actions>
+    <Action id="Dialog5" type="Dialog" path="Dialog5.xml" texture="TapArea/Vaxta" skip="false" />
+    <Action id="Dialog6" type="Dialog" path="Dialog6.xml" texture="" skip="true" />
+    <Action id="Dialog7" type="Dialog" path="Dialog7.xml" texture="" skip="true" />
+    <Action id="Dialog8" type="Dialog" path="Dialog8.xml" texture="" skip="true" />
+    <Action id="Dialog9" type="Dialog" path="Dialog9.xml" texture="" skip="true" />
+    <Action id="Dialog10" type="Dialog" path="Dialog10.xml" texture="" skip="true" />
+    <Action id="MiniGameHO" type="MiniGame" path="MiniGameHO.xml" texture="" skip="true" />
+    <Action id="Dialog10" type="Dialog" path="Dialog10.xml" texture="" skip="true" />
+  </Actions>
+</Quest>

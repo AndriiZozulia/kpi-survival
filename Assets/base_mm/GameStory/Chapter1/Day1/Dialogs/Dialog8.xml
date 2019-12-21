@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog8" texture = "Backgrounds/Stairs">
+  <Replics>
+    <Replica type="phrase" text="Опа, теперь поднимаемся на этаж выше." texture=""/>
+  </Replics>
+</DialogEntity>

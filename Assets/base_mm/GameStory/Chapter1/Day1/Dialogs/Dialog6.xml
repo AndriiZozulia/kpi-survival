@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog6" texture = "Backgrounds/Corridor">
+  <Replics>
+    <Replica type="phrase" text="Так, ищем буфет." texture=""/>
+    
+  </Replics>
+</DialogEntity>

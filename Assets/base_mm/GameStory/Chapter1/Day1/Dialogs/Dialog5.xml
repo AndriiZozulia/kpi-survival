@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog5" texture = "Backgrounds/Vaxta">
+  <Replics>
+    <Replica type="phrase" text="Я: Добрый день! Пропустите меня, пожалуйста." texture=""/>
+    <Replica type="phrase" text="Вахтерша: А где твой студенческий?" texture="Characters/Vaxter.png"/>
+    <Replica type="phrase" text="Я: У меня его ещё нет.Я пришел первый раз на учебу" texture="Characters/Vaxter.png"/>
+    <Replica type="phrase" text="Вахтерша: Не лезь, она тебя сожрет!" texture="Characters/Vaxter.png"/>
+    <Replica type="phrase" text="Я: Что простите?" texture="Characters/Vaxter.png"/>
+    <Replica type="phrase" text="Вахтерша: Говорю проходи скорей, я на кнопку нажала." texture="Characters/Vaxter.png"/>
+    <Replica type="phrase" text="Вахтерша: О, а ещё можете подсказать как пройти в аудиторию 304?" texture="Characters/Vaxter.png"/>
+    <Replica type="phrase" text="Вахтерша: Подскажу, милок" texture="Characters/Vaxter.png"/>
+    <Replica type="phrase" text="Вахтерша: Поворачиваешь направо, дальше идешь вдоль коридора. Там за буфетом,слева, будет лестница." texture="Characters/Vaxter.png"/>
+    <Replica type="phrase" text="Вахтерша: Поднимаешься на один этаж ,а там будет холл с лекционками." texture="Characters/Vaxter.png"/>
+    <Replica type="phrase" text="Я: Спасибо большое" texture="Characters/Vaxter.png"/>
+  </Replics>
+</DialogEntity>

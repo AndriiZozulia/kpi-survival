@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog10" texture = "Backgrounds/LectionDoor">
+  <Replics>
+    <Replica type="phrase" text="А вот и 304я аудитория." texture=""/>
+    <Replica type="phrase" text="Волнительно, но интересно. Давно не было такого чувства." texture=""/>
+    <Replica type="phrase" text="Двери в новый этап жизни." texture=""/>
+    
+  </Replics>
+</DialogEntity>
