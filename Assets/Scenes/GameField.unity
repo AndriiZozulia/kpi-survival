@@ -530,6 +530,7 @@ GameObject:
   - component: {fileID: 933202575}
   - component: {fileID: 933202574}
   - component: {fileID: 933202573}
+  - component: {fileID: 933202577}
   m_Layer: 5
   m_Name: MiniGameButton
   m_TagString: Untagged
@@ -631,6 +632,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933202571}
   m_CullTransparentMesh: 0
+--- !u!111 &933202577
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933202571}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 4e7281c53bb194792b70dd0fc0282949, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 4e7281c53bb194792b70dd0fc0282949, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1001644904
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +993,7 @@ GameObject:
   - component: {fileID: 1979743927}
   - component: {fileID: 1979743929}
   - component: {fileID: 1979743930}
+  - component: {fileID: 1979743931}
   m_Layer: 5
   m_Name: DialogButton
   m_TagString: Untagged
@@ -1077,6 +1095,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
+--- !u!111 &1979743931
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979743925}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 4e7281c53bb194792b70dd0fc0282949, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 4e7281c53bb194792b70dd0fc0282949, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &2044902274
 GameObject:
   m_ObjectHideFlags: 0
