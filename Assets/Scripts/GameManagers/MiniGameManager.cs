@@ -26,16 +26,23 @@ public class MiniGameManager
         miniGameAction = FindUtil.FindIncludingInactive("MiniGame");
     }
 
-    public void StartMiniGameAction(string miniGameID, string texture, bool skip)
+    public void StartMiniGameAction()
     {
-        if (miniGameBttn && !skip)
+        var action = GameManagerBehaviour.GetInstance().GetStoryControlerManager().GetCurrentAction();
+
+        if (action == null)
         {
-            miniGameBttn.GetComponent<Image>().sprite = Resources.Load<Sprite>(texture);
+            throw new NullReferenceException();
+        }
+
+        if (miniGameBttn)
+        {
+            miniGameBttn.GetComponent<Image>().sprite = Resources.Load<Sprite>(action.texture);
 
             var rect = miniGameBttn.GetComponent<Image>().sprite.rect;
             miniGameBttn.transform.localScale = new Vector3(rect.width / 100.0f, rect.height / 100.0f, 0);
-
-            miniGameBttn.SetActive(!skip);
+            miniGameBttn.transform.position = new Vector3(action.x, action.y, 0);
+            miniGameBttn.SetActive(!action.skip);
         }
         else
         {
@@ -45,9 +52,9 @@ public class MiniGameManager
         if (miniGameAction)
         {
             var mg = miniGameAction.GetComponent<MiniGameAction>();
-            mg.SetMiniGame(miniGameID);
+            mg.SetMiniGame(action.id);
 
-            if (skip)
+            if (action.skip)
             {
                 mg.StartMiniGame();
             }

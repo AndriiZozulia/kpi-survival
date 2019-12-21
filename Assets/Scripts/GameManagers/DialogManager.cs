@@ -26,11 +26,18 @@ public class DialogManager
         dialogAction = FindUtil.FindIncludingInactive("Dialog");
     }
 
-    public void StartDialogAction(string dialogID, string texture, bool skip)
+    public void StartDialogAction()
     {
+        var action = GameManagerBehaviour.GetInstance().GetStoryControlerManager().GetCurrentAction();
+
+        if (action == null)
+        {
+            throw new NullReferenceException();
+        }
+
         if (dialogBttn)
         {
-            var sprite = Resources.Load<Sprite>(texture);
+            var sprite = Resources.Load<Sprite>(action.texture);
 
             if (sprite)
             {
@@ -38,8 +45,8 @@ public class DialogManager
 
                 var rect = dialogBttn.GetComponent<Image>().sprite.rect;
                 dialogBttn.transform.localScale = new Vector3(rect.width / 100.0f, rect.height / 100.0f, 0);
-
-                dialogBttn.SetActive(!skip);
+                dialogBttn.transform.localPosition = new Vector3(action.x, action.y, 0);
+                dialogBttn.SetActive(!action.skip);
             }
         }
         else
@@ -49,11 +56,13 @@ public class DialogManager
 
         if (dialogAction)
         {
-            if (skip)
+            if (action.skip)
             {
                 GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.Dialog);
+                var dialog = dialogAction.GetComponent<DialogAction>();
+                dialog.SetDialog(action.id);
+                dialog.SetBackground();
             }
-            dialogAction.GetComponent<DialogAction>().SetDialog(dialogID);
         }
         else
         {

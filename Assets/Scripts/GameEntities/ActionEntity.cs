@@ -33,5 +33,11 @@ namespace Entity
 
         [XmlAttribute("skip")]
         public bool skip;
+
+        [XmlAttribute("x")]
+        public float x;
+
+        [XmlAttribute("y")]
+        public float y;
     }
 }

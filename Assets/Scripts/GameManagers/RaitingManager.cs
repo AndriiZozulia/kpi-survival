@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 public enum RatingPoint
 {
     Intelligence,
-    Force
+    Respect
 }
 
 public class RatingManager
@@ -42,7 +42,7 @@ public class RatingManager
         switch(rating)
         {
             case RatingPoint.Intelligence: ratingEntity.intelligence += value; break;
-            case RatingPoint.Force: ratingEntity.force += value;  break;
+            case RatingPoint.Respect: ratingEntity.respect += value;  break;
         }
     }
 }

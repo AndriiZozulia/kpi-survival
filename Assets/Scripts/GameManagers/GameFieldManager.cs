@@ -108,6 +108,11 @@ public class GameFieldManager
             Dialog = GameManagerBehaviour.GetInstance().GetDialogManager().GetDialogAction();
         }
 
+        if (show)
+        {
+            Dialog.GetComponent<DialogAction>().SetBackground();
+        }
+
         Dialog.SetActive(show);
     }
 

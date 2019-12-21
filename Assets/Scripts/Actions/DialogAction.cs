@@ -22,8 +22,6 @@ public class DialogAction : MonoBehaviour
         dialogID = newDialogID;
         Init();
 
-        SetBackground();
-
         text.gameObject.SetActive(false);
         decision_1.gameObject.SetActive(false);
         decision_2.gameObject.SetActive(false);
@@ -140,7 +138,7 @@ public class DialogAction : MonoBehaviour
 
         switch(rating[0])
         {
-            case "F": handler.rating = RatingPoint.Force; break;
+            case "F": handler.rating = RatingPoint.Respect; break;
             case "I": handler.rating = RatingPoint.Intelligence; break;
         }
 

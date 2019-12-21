@@ -35,10 +35,10 @@ public class StoryControlerManager
             switch (currAction.type)
             {
                 case ActionType.Dialog:
-                    GameManagerBehaviour.GetInstance().GetDialogManager().StartDialogAction(currAction.id, currAction.texture, currAction.skip);
+                    GameManagerBehaviour.GetInstance().GetDialogManager().StartDialogAction();
                     break;
                 case ActionType.MiniGame:
-                    GameManagerBehaviour.GetInstance().GetMiniGameManager().StartMiniGameAction(currAction.id, currAction.texture, currAction.skip);
+                    GameManagerBehaviour.GetInstance().GetMiniGameManager().StartMiniGameAction();
                     break;
                 case ActionType.Final:
                     GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.Final);
