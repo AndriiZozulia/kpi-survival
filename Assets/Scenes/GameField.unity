@@ -641,10 +641,10 @@ Animation:
   m_GameObject: {fileID: 933202571}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 4e7281c53bb194792b70dd0fc0282949, type: 2}
+  m_Animation: {fileID: 7400000, guid: 25c57f9311f66457a9c1f561f6e1ea19, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 4e7281c53bb194792b70dd0fc0282949, type: 2}
-  m_WrapMode: 0
+  - {fileID: 7400000, guid: 25c57f9311f66457a9c1f561f6e1ea19, type: 2}
+  m_WrapMode: 4
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
@@ -1000,7 +1000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1979743926
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1039,7 +1039,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1104,10 +1104,10 @@ Animation:
   m_GameObject: {fileID: 1979743925}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 4e7281c53bb194792b70dd0fc0282949, type: 2}
+  m_Animation: {fileID: 7400000, guid: 25c57f9311f66457a9c1f561f6e1ea19, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 4e7281c53bb194792b70dd0fc0282949, type: 2}
-  m_WrapMode: 0
+  - {fileID: 7400000, guid: 25c57f9311f66457a9c1f561f6e1ea19, type: 2}
+  m_WrapMode: 4
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
