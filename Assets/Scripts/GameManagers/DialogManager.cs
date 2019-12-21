@@ -49,7 +49,10 @@ public class DialogManager
 
         if (dialogAction)
         {
-            GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.Dialog);
+            if (skip)
+            {
+                GameManagerBehaviour.GetInstance().GetGameFieldManager().SetGameFieldState(GameFieldState.Dialog);
+            }
             dialogAction.GetComponent<DialogAction>().SetDialog(dialogID);
         }
         else

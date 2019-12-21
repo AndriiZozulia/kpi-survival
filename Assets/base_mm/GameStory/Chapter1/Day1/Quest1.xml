@@ -2,5 +2,7 @@
 <Quest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Quest1" day="Chapter1/Day1" background="Backgrounds/18corp" >
   <Actions>
     <Action id="Dialog1" type="Dialog" path="Dialog1.xml" texture="" skip="true" />
+    <Action id="Dialog2" type="Dialog" path="Dialog2.xml" texture="UI/MiniGames/HiddenObjects/Iqos_cut" skip="false" />
+    <Action id="Dialog3" type="Dialog" path="Dialog3.xml" texture="" skip="true" />
   </Actions>
 </Quest>
