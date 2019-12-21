@@ -13,5 +13,11 @@ namespace Entity
 
 		[XmlAttribute("texture")]
 		public string texture;
+
+        [XmlAttribute("x")]
+        public float x;
+
+        [XmlAttribute("y")]
+        public float y;
     }
 }

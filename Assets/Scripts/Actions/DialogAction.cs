@@ -55,6 +55,12 @@ public class DialogAction : MonoBehaviour
                 image.sprite = sprite;
                 var rect = image.sprite.rect;
                 image.transform.localScale = new Vector3(rect.width / 100.0f, rect.height / 100.0f, 0);
+                image.transform.localPosition = new Vector3(replica.x, replica.y, 0);
+                image.gameObject.SetActive(true);
+            }
+            else
+            {
+                image.gameObject.SetActive(false);
             }
 
             if (replica.type.Equals("phrase"))
