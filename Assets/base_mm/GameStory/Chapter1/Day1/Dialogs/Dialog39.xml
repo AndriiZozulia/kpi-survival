@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog39" texture="Backgrounds/Polyana">
+  	<Replics>
+	    <Replica type="phrase" text="Девушка: Привет, ты классный" texture="Characters/GirlPolyana" x="0.0" y="-65.0"/>
+		<Replica type="phrase" text="Думает: Я в это не верю" texture="Characters/GirlPolyana" x="0.0" y="-65.0"/>
+		<Replica type="phrase" text="Думает: Блин, нужно было помыться" texture="Characters/GirlPolyana" x="0.0" y="-65.0"/>
+		<Replica type="phrase" text="Девушка: Меня Настя зовут. Дай телегу..." texture="Characters/GirlPolyana" x="0.0" y="-65.0"/>
+		<Replica type="phrase" text=" In a while..." texture=""/>
+	</Replics>
+</DialogEntity> 

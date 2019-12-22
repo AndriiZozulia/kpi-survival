@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog21" texture="Backgrounds/LectionDoor">
   	<Replics>
-	    <Replica type="phrase" text="Я: Привет, меня зовут Виталий" texture="Characters/Староста" x="0.0" y="-65.0"/>
-	    <Replica type="phrase" text="Я: У тебя есть мой студак ?" texture="Characters/Староста" x="0.0" y="-65.0"/>
-	    <Replica type="phrase" text="Староста: Да, конечно" texture="Characters/Староста" x="0.0" y="-65.0"/>
-		<Replica type="phrase" text="Староста: Сейчас найду" texture="Characters/Староста" x="0.0" y="-65.0"/>
+	    <Replica type="phrase" text="Я: Привет, меня зовут Виталий" texture="Characters/Староста" x="0.0" y="-62.0"/>
+	    <Replica type="phrase" text="Я: У тебя есть мой студак ?" texture="Characters/Староста" x="0.0" y="-62.0"/>
+	    <Replica type="phrase" text="Староста: Да, конечно" texture="Characters/Староста" x="0.0" y="-62.0"/>
+		<Replica type="phrase" text="Староста: Сейчас найду" texture="Characters/Староста" x="0.0" y="-62.0"/>
 	</Replics>
 </DialogEntity> 

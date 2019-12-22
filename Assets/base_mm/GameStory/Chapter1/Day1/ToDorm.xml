@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Quest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ToDorm" day="Chapter1/Day1" background="Backgrounds/Vaxta" >
+  <Actions>
+    <Action id="Dialog21" type="Dialog" path="Dialog21.xml" texture="" skip="true" />
+    <Action id="Dialog22" type="Dialog" path="Dialog22.xml" texture="" skip="true" />
+    <Action id="Dialog23" type="Dialog" path="Dialog23.xml" texture="" skip="true" />
+    <Action id="Dialog24" type="Dialog" path="Dialog24.xml" texture="" skip="true" />
+    <Action id="Dialog25" type="Dialog" path="Dialog25.xml" texture="" skip="true" />
+    <Action id="Dialog26" type="Dialog" path="Dialog26.xml" texture="" skip="true" />
+    <Action id="Dialog27" type="Dialog" path="Dialog27.xml" texture="" skip="true" />
+  </Actions>
+</Quest>

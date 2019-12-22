@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog36" texture="Backgrounds/KPISport">
+  	<Replics>
+	    <Replica type="phrase" text="Думает: Сделаю пару упражнений на плечи, перед упражнениями на печень в 7 часов" texture=""/>
+	</Replics>
+</DialogEntity> 
