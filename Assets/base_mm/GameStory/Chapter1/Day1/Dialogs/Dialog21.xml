@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog21" texture="Backgrounds/LectureWithYarik">
+  	<Replics>
+	    <Replica type="phrase" text="Думает: Нужно взять у старосты студенческий" texture=""/>
+	</Replics>
+</DialogEntity> 

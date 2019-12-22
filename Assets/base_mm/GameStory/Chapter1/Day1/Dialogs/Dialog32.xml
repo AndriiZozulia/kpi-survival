@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog32" texture="Backgrounds/LectionFull">
+  	<Replics>
+	    <Replica type="phrase" text="Думает: Ну, вроде что-то написал" texture=""/>
+	</Replics>
+</DialogEntity> 

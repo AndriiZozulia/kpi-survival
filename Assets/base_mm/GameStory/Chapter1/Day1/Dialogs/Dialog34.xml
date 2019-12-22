@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog34" texture="Backgrounds/DormWithVasyan">
+  	<Replics>
+	    <Replica type="phrase" text="Я: Васян, кушать будешь ?" texture=""/>
+		<Replica type="phrase" text="Васян: Не..." texture=""/>
+		<Replica type="phrase" text="Думает: Пойду поем" texture=""/>
+	</Replics>
+</DialogEntity> 

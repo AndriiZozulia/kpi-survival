@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog33" texture="Backgrounds/LectionFull">
+  	<Replics>
+	    <Replica type="phrase" text="Одногруппник: Привет, я Серега Симонов" texture="Characters/Komaraden" x="0.0" y="-65.0"/>
+		<Replica type="phrase" text="Я: Привет, я Виталий" texture="Characters/Komaraden" x="0.0" y="-65.0"/>
+		<Replica type="phrase" text="Серега Симонов: Мы договорились сегодня вечером с ребятами пойти погулять, так сказать отметить" texture="Characters/Komaraden" x="0.0" y="-65.0"/>
+		<Replica type="phrase" text="Серега Симонов: Тебя ждать ?" texture="Characters/Komaraden" x="0.0" y="-65.0"/>
+		<Replica type="phrase" text="Я: Да, конечно. В котором часу встреча ?" texture="Characters/Komaraden" x="0.0" y="-65.0"/>
+		<Replica type="phrase" text="Серега Симонов: На 7 вечера, у поляны" texture="Characters/Komaraden" x="0.0" y="-65.0"/>
+		<Replica type="phrase" text="Я: Ок" texture="Characters/Komaraden" x="0.0" y="-65.0"/>
+		<Replica type="phrase" text="Серега Симонов: Будь на позитиве , добра тебе." texture="Characters/Komaraden" x="0.0" y="-65.0"/>
+	</Replics>
+</DialogEntity> 

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog30" texture="Backgrounds/LectionFull">
+  	<Replics>
+	    <Replica type="phrase" text="Препод: И так. У меня нет расовой дискриминации. Вы все здесь одинаково ничтожны." texture=""/>
+	    <Replica type="phrase" text="Препод: Но вы станете инженерами или не будете учится на моей любимой кафедре." texture=""/>
+	    <Replica type="phrase" text="Препод: Начинаем тест. Это срез знаний." texture=""/>
+		<Replica type="phrase" text="Препод: Кто не справится, будет отчислен." texture=""/>
+		<Replica type="phrase" text="Думает: Я в дерьме…" texture=""/>
+	</Replics>
+</DialogEntity> 
