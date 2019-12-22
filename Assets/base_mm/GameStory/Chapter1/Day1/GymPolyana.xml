@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Quest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="GymPolyana" day="Chapter1/Day1" background="Backgrounds/Vaxta" >
+  <Actions>
+    <Action id="Dialog34" type="Dialog" path="Dialog34.xml" texture="" skip="true" />
+    <Action id="Dialog35" type="Dialog" path="Dialog35.xml" texture="" skip="true" />
+    <Action id="Dialog36" type="Dialog" path="Dialog36.xml" texture="" skip="true" />
+    <Action id="GymMiniGame" type="MiniGame" path="GymMiniGame.xml" texture="" skip="true" />
+    <Action id="Dialog37" type="Dialog" path="Dialog37.xml" texture="" skip="true" />
+    <Action id="Dialog38" type="Dialog" path="Dialog38.xml" texture="" skip="true" />
+    <Action id="Dialog39" type="Dialog" path="Dialog39.xml" texture="" skip="true" />
+    <Action id="Dialog40" type="Dialog" path="Dialog40.xml" texture="" skip="true" />
+  </Actions>
+</Quest>

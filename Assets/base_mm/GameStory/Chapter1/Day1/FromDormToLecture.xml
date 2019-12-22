@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Quest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="FromDormToLecture" day="Chapter1/Day1" background="Backgrounds/Vaxta" >
+  <Actions>
+    <Action id="Dialog28" type="Dialog" path="Dialog28.xml" texture="" skip="true" />
+    <Action id="Dialog29" type="Dialog" path="Dialog29.xml" texture="" skip="true" />
+    <Action id="Dialog30" type="Dialog" path="Dialog30.xml" texture="" skip="true" />
+    <Action id="Dialog31" type="Dialog" path="Dialog31.xml" texture="" skip="true" />
+    <Action id="MiniGameCheating" type="MiniGame" path="MiniGameCheating.xml" texture="" skip="true" />
+    <Action id="Dialog32" type="Dialog" path="Dialog32.xml" texture="" skip="true" />
+    <Action id="Dialog33" type="Dialog" path="Dialog33.xml" texture="" skip="true" />
+  </Actions>
+</Quest>
