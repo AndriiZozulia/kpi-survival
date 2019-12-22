@@ -7,16 +7,13 @@ public class TimerText : MonoBehaviour
     public static int seconds = 0;
     public GameObject timerText;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
          timerText = GameObject.Find("TimerText");
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
          timer += Time.deltaTime;
-         // turn seconds in float to int
          seconds = (int)(timer % 60);
          timerText.GetComponent<Text>().text = seconds.ToString();
     }

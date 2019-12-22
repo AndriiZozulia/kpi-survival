@@ -5,19 +5,23 @@ using UnityEngine.UI;
 public class TestIndicator : MonoBehaviour
 {
 public static bool isWatching = true;
-bool isRunning = false;
+private bool isRunning = false;
+
+Texture2D Looking;
+Texture2D NotLooking;
 public  GameObject testIndi;
 
     // Start is called before the first frame update
     void Start()
     {
         testIndi = GameObject.Find("TestIndicator");
+        Looking = Resources.Load("UI/MiniGames/CheatingMiniGameUIElevents/TeacherLooking") as Texture2D;
+        NotLooking= Resources.Load("UI/MiniGames/CheatingMiniGameUIElevents/TeacherNotLooking") as Texture2D;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-           Wrapper();
+    void Update(){
+        Wrapper();
     }
 
 public void Wrapper(){
@@ -27,19 +31,22 @@ public void Wrapper(){
  }
 
 IEnumerator instTestIndicator () {
+        var exr = testIndi.GetComponent<RawImage>();
         isRunning = true;
-        if(TimerText.seconds < 50) {
+        if(TimerText.seconds < 20) {
             var random = new System.Random();
             var b = random.Next(2);
                 if(b == 1){
                     isWatching = true;
-                    testIndi.GetComponent<Image>().color = Color.blue;
+                    exr.texture = NotLooking;
                 } else {
                     isWatching = false;
-                    testIndi.GetComponent<Image>().color = Color.red;
+                    exr.texture = Looking;
             }
         yield return new WaitForSeconds(1.5f);
-        } 
+        } else {
+                Reverse.isFinished = true;
+        }
         isRunning = false;
 }
 }
