@@ -5,12 +5,12 @@
     <Replica type="phrase" text="Вахтерша: А где твой студенческий?" texture="Characters/Vaxter" x="0.0" y="-65.0"/>
     <Replica type="phrase" text="Я: У меня его ещё нет.Я пришел первый раз на учебу" texture="Characters/Vaxter" x="0.0" y="-65.0"/>
     <Replica type="phrase" text="Вахтерша: Не лезь, оно тебя сожрет!" texture="Characters/Vaxter" x="0.0" y="-65.0"/>
-    <Replica type="phrase" text="Я: Что простите?" texture="Characters/Vaxter.png" x="0.0" y="-65.0"/>
+    <Replica type="phrase" text="Я: Что простите?" texture="Characters/Vaxter" x="0.0" y="-65.0"/>
     <Replica type="phrase" text="Вахтерша: Говорю проходи скорей, я на кнопку нажала." texture="Characters/Vaxter" x="0.0" y="-65.0"/>
-    <Replica type="phrase" text="Вахтерша: О, а ещё можете подсказать как пройти в аудиторию 304?" texture="Characters/Vaxter.png" x="0.0" y="-65.0"/>
+    <Replica type="phrase" text="Вахтерша: О, а ещё можете подсказать как пройти в аудиторию 304?" texture="Characters/Vaxter" x="0.0" y="-65.0"/>
     <Replica type="phrase" text="Вахтерша: Подскажу, милок" texture="Characters/Vaxter" x="0.0" y="-65.0"/>
     <Replica type="phrase" text="Вахтерша: Поворачиваешь направо, дальше идешь вдоль коридора. Там за буфетом,слева, будет лестница." texture="Characters/Vaxter" x="0.0" y="-65.0"/>
-    <Replica type="phrase" text="Вахтерша: Поднимаешься на один этаж ,а там будет холл с лекционками." texture="Characters/Vaxter.png" x="0.0" y="-65.0"/>
+    <Replica type="phrase" text="Вахтерша: Поднимаешься на один этаж ,а там будет холл с лекционками." texture="Characters/Vaxter" x="0.0" y="-65.0"/>
     <Replica type="phrase" text="Я: Спасибо большое" texture="Characters/Vaxter" x="0.0" y="-65.0"/>
   </Replics>
 </DialogEntity>

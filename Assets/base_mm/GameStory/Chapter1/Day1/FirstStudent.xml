@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <Quest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="FirstStudent" day="Chapter1/Day1" background="Backgrounds/EmptyLection" >
   <Actions>
-    <Action id="Dialog12" type="Dialog" path="Dialog12.xml" texture="Characters/Zhenia" skip="false" />
+    <Action id="Dialog12" type="Dialog" path="Dialog12.xml" texture="Characters/Zhenia" skip="false" x="0.0" y="73.0"/>
     <Action id="Dialog13" type="Dialog" path="Dialog13.xml" texture="" skip="true" />
     <Action id="Dialog14" type="Dialog" path="Dialog14.xml" texture="" skip="true" />
     <Action id="Dialog15" type="Dialog" path="Dialog15.xml" texture="" skip="true" />
     <Action id="Dialog16" type="Dialog" path="Dialog16.xml" texture="" skip="true" />
     <Action id="Dialog17" type="Dialog" path="Dialog17.xml" texture="" skip="true" />
     <Action id="Dialog18" type="Dialog" path="Dialog18.xml" texture="" skip="true" />
-    <Action id="Dialog19" type="Dialog" path="Dialog19.xml" texture="" skip="true" />
+    <Action id="MiniGameHO" type="MiniGame" path="MiniGameHO.xml" texture="" skip="true" />
+	<Action id="Dialog18" type="Dialog" path="Dialog18.xml" texture="" skip="true" />
   </Actions>
 </Quest>

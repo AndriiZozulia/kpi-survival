@@ -7,7 +7,5 @@
     <Action id="Dialog8" type="Dialog" path="Dialog8.xml" texture="" skip="true" />
     <Action id="Dialog9" type="Dialog" path="Dialog9.xml" texture="" skip="true" />
     <Action id="Dialog10" type="Dialog" path="Dialog10.xml" texture="" skip="true" />
-    <Action id="MiniGameHO" type="MiniGame" path="MiniGameHO.xml" texture="" skip="true" />
-    <Action id="Dialog10" type="Dialog" path="Dialog10.xml" texture="" skip="true" />
   </Actions>
 </Quest>

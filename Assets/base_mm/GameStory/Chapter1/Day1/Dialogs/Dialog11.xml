@@ -5,7 +5,7 @@
     <Replica type="phrase" text="Сейчас будет дискретная математика, должно быть невероятно интересно!" texture=""/>
     <Replica type="phrase" text="Автор: (нет)" texture=""/>
     <Replica type="phrase" text="Наверное научат разным интересным алгоритмам. Давно мечтал узнать что такое граф." texture=""/>
-    <Replica type="phrase" text="А вот и первый студент. Может он из моей группы? Надо узнать" texture="Characters/Zhenia"/>
+    <Replica type="phrase" text="А вот и первый студент. Может он из моей группы? Надо узнать" texture="Characters/Zhenia" x="0.0" y="75.0"/>
     
   </Replics>
 </DialogEntity>

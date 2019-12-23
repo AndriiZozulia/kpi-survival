@@ -1,6 +1,13 @@
 <?xml version="1.0"?>
 <DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog12" texture = "Backgrounds/EmptyLection">
   <Replics>
-    
+		    <Replica type="phrase" text="Я: Привет, ты с группы х?" texture="Characters/Zhenia" x="0.0" y="75.0"/>
+		    <Replica type="phrase" text="Женя: О, да. Видимо ты тоже." texture="Characters/Zhenia" x="0.0" y="75.0"/>
+		    <Replica type="phrase" text="Женя: Я Женя. Я приехал из города Х? А ты, тоже не из Киева?" texture="Characters/Zhenia" x="0.0" y="75.0"/>
+		    <Replica type="decision" text="А что, есть с этим какие-то проблемы?%F#1/А что, так сильно заметно?%I#0" texture="Characters/Zhenia" x="0.0" y="75.0"/>
+			<Replica type="phrase" text="Женя: Ладно, не бери в голову. Мы же пришли сюда учиться, а не ругаться." texture="Characters/Zhenia" x="0.0" y="75.0"/>
+			<Replica type="phrase" text="Я: Это точно, я пришел за знаниями." texture="Characters/Zhenia" x="0.0" y="75.0"/>
+			<Replica type="phrase" text="Женя: Ну и я настроен серьезно." texture="Characters/Zhenia" x="0.0" y="75.0"/>
+			
   </Replics>
 </DialogEntity>

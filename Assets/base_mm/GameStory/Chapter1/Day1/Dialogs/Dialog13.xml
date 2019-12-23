@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
-<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog10" texture = "Backgrounds/LectionDoor">
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog13" texture = "Backgrounds/LectureWithYarik">
   <Replics>
-    <Replica type="phrase" text="А вот и 304я аудитория." texture=""/>
-    <Replica type="phrase" text="Волнительно, но интересно. Давно не было такого чувства." texture=""/>
-    <Replica type="phrase" text="Двери в новый этап жизни." texture=""/>
-    
+    <Replica type="phrase" text="Я: А вот и препод. Пойдем скорее занимать места." texture="Characters/Zhenia" x="0.0" y="75.0"/>
+    <Replica type="phrase" text="Женя: Ага, идем на третюю парту." texture="Characters/Zhenia" x="0.0" y="75.0"/>
   </Replics>
 </DialogEntity>
