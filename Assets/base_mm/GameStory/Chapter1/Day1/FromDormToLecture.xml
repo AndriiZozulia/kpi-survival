@@ -5,7 +5,7 @@
     <Action id="Dialog29" type="Dialog" path="Dialog29.xml" texture="" skip="true" />
     <Action id="Dialog30" type="Dialog" path="Dialog30.xml" texture="" skip="true" />
     <Action id="Dialog31" type="Dialog" path="Dialog31.xml" texture="" skip="true" />
-    <Action id="MiniGameHO" type="MiniGame" path="MiniGameHO.xml" texture="" skip="true" />
+    <Action id="MiniGameCheating" type="MiniGame" path="MiniGameCheating.xml" texture="" skip="true" />
     <Action id="Dialog32" type="Dialog" path="Dialog32.xml" texture="" skip="true" />
     <Action id="Dialog33" type="Dialog" path="Dialog33.xml" texture="" skip="true" />
   </Actions>

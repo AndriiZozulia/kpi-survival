@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog17" texture = "Backgrounds/Lection">
   <Replics>
-    <Replica type="phrase" text="Посплю и я." texture=""/>
-    <Replica type="phare" text="Фуух, вот и конец пары. Тяжело высидеть 1.5 часа." texture=""/>
-    <Replica type="phare" text="Надо забрать студак" texture=""/>
+    <Replica type="phrase" text="Может и мне поспать?" texture=""/>
+	<Replica type="decision" text="Поспать%F#0/Слушать лекцию дальше%I#1" texture=""/>
+
+    <Replica type="phrase" text="Фуух, вот и конец пары. Тяжело высидеть 1.5 часа." texture=""/>
+    <Replica type="phrase" text="Надо забрать студак" texture=""/>
   </Replics>
 </DialogEntity>
