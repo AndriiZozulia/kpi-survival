@@ -3,6 +3,6 @@
   <Replics>
     <Replica type="phrase" text="Посплю и я." texture=""/>
     <Replica type="phare" text="Фуух, вот и конец пары. Тяжело высидеть 1.5 часа." texture=""/>
-    <Replica type="phare" text="Надо сходить в общагу" texture=""/>
+    <Replica type="phare" text="Надо забрать студак" texture=""/>
   </Replics>
 </DialogEntity>

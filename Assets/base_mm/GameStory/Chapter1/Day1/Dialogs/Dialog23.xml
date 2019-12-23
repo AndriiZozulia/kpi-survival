@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog23" texture="Backgrounds/Студенческий2">
+<DialogEntity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Dialog23" texture="Backgrounds/Studak">
   	<Replics>
 	    <Replica type="phrase" text="Думает: Я тут выгляжу моложе" texture=""/>
 	</Replics>
