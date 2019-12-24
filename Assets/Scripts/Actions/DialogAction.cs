@@ -17,6 +17,11 @@ public class DialogAction : MonoBehaviour
     DialogEntity dialogEntity;
     uint replicaIndex;
 
+    private void Start()
+    {
+        GameManagerBehaviour.GetInstance().GetDialogManager().Load();
+    }
+
     public void SetDialog(string newDialogID)
     {
         dialogID = newDialogID;

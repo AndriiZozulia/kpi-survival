@@ -28,6 +28,8 @@ public class DialogManager
 
     public void StartDialogAction()
     {
+        Load();
+
         var action = GameManagerBehaviour.GetInstance().GetStoryControlerManager().GetCurrentAction();
 
         if (action == null)
@@ -35,23 +37,27 @@ public class DialogManager
             throw new NullReferenceException();
         }
 
-        if (dialogBttn)
-        {
-            var sprite = Resources.Load<Sprite>(action.texture);
 
-            if (sprite)
+        if (!action.skip)
+        {
+            if (dialogBttn)
             {
-                dialogBttn.GetComponent<Image>().sprite = sprite;
+                var sprite = Resources.Load<Sprite>(action.texture);
 
-                var rect = dialogBttn.GetComponent<Image>().sprite.rect;
-                dialogBttn.transform.localScale = new Vector3(rect.width / 100.0f, rect.height / 100.0f, 0);
-                dialogBttn.transform.localPosition = new Vector3(action.x, action.y, 0);
-                dialogBttn.SetActive(!action.skip);
+                if (sprite)
+                {
+                    dialogBttn.GetComponent<Image>().sprite = sprite;
+
+                    var rect = dialogBttn.GetComponent<Image>().sprite.rect;
+                    dialogBttn.transform.localScale = new Vector3(rect.width / 100.0f, rect.height / 100.0f, 0);
+                    dialogBttn.transform.localPosition = new Vector3(action.x, action.y, 0);
+                    dialogBttn.SetActive(!action.skip);
+                }
             }
-        }
-        else
-        {
-            throw new NullReferenceException();
+            else
+            {
+                throw new NullReferenceException();
+            }
         }
 
         if (dialogAction)

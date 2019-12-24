@@ -9,6 +9,7 @@ public class MiniGameAction : MonoBehaviour
     protected void Start()
     {
         sceneLoader = GetComponent<SceneLoader>();
+        GameManagerBehaviour.GetInstance().GetMiniGameManager().Load();
     }
 
     public void OnStart()
@@ -18,11 +19,10 @@ public class MiniGameAction : MonoBehaviour
 
     public void OnFinish(RatingEntity rating)
     {
-        GameManagerBehaviour.GetInstance().GetStoryControlerManager().OnActionFinish();
-        GameManagerBehaviour.GetInstance().GetRatingManager().Add(RatingPoint.Intelligence, rating.intelligence);
-        GameManagerBehaviour.GetInstance().GetRatingManager().Add(RatingPoint.Respect, rating.respect);
         sceneLoader.sceneName = sceneLoader.GetLastLoadedScene().name;
         sceneLoader.LoadScene();
+        GameManagerBehaviour.GetInstance().GetRatingManager().Add(RatingPoint.Intelligence, rating.intelligence);
+        GameManagerBehaviour.GetInstance().GetRatingManager().Add(RatingPoint.Respect, rating.respect);
     }
 
     public void SetMiniGame(string id)
