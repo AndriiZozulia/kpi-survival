@@ -73,14 +73,21 @@ public class StoryControlerManager
             {
                 Debug.Log("End of storyline");
             }
-        }
 
-        GameManagerBehaviour.GetInstance().GetSaveManager().SavePlayer();
+            GameManagerBehaviour.GetInstance().GetSaveManager().SavePlayer();
+        }
     }
 
     public ActionEntity GetCurrentAction()
     {
         return currQuest.actions[actionIndex];
     }
-            
+
+    public void SetNextAction()
+    {
+        actionIndex += 1;
+
+        GameManagerBehaviour.GetInstance().GetSaveManager().SavePlayer();
+    }
+    
 }

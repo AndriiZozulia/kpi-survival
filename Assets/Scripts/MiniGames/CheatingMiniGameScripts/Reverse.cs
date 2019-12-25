@@ -43,6 +43,8 @@ public class Reverse : MiniGameAction
     }
     public new void Start()
     {
+        isFinished = false;
+        score = 0;
         base.Start();
 
     }

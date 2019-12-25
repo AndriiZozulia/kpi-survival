@@ -19,10 +19,11 @@ public class MiniGameAction : MonoBehaviour
 
     public void OnFinish(RatingEntity rating)
     {
-        sceneLoader.sceneName = sceneLoader.GetLastLoadedScene().name;
-        sceneLoader.LoadScene();
+        GameManagerBehaviour.GetInstance().GetStoryControlerManager().SetNextAction();
         GameManagerBehaviour.GetInstance().GetRatingManager().Add(RatingPoint.Intelligence, rating.intelligence);
         GameManagerBehaviour.GetInstance().GetRatingManager().Add(RatingPoint.Respect, rating.respect);
+        sceneLoader.sceneName = sceneLoader.GetLastLoadedScene().name;
+        sceneLoader.LoadScene();
     }
 
     public void SetMiniGame(string id)
