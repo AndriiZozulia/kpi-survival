@@ -10,8 +10,10 @@ public class HiddenObjectsController : MonoBehaviour
 	[SerializeField] private float mainTimer;
 	
 
-    private static int numberOfObjects=6;
+    private int numberOfObjects = 6;
     public static int foundObjects = 0;
+    public static int respectObjects = 0;
+    public static int intelligenceObjects = 0;
     private static bool canCount = false;
     private static bool gameFinished = false;
 	private static float timer;
@@ -63,9 +65,10 @@ public class HiddenObjectsController : MonoBehaviour
     {
         if (foundObjects == numberOfObjects && !gameFinished)
         {
-            int score = HiddenObjectsManager.GetInstance().OnVictory(timer, numberOfObjects);
+            HiddenObjectsManager.GetInstance().OnVictory(timer, respectObjects, intelligenceObjects);
 
-            uiScore.text = "Your score: " + score;
+            uiScore.text = "You gained " + HiddenObjectsManager.GetInstance().respectPoints + " Respect and "
+                + HiddenObjectsManager.GetInstance().intelligencePoints + " Intelligence points";
             GameObject.Find("ScoreBttn").GetComponent<Animation>().Play("ScoreAppearence");
             canCount = false;
             gameFinished = true;
@@ -75,10 +78,12 @@ public class HiddenObjectsController : MonoBehaviour
 
     private void OnLoss()
     {
-        HiddenObjectsManager.GetInstance().OnLoss(foundObjects);
-       
-        uiScore.text = "Your score: " + foundObjects;
+        HiddenObjectsManager.GetInstance().OnLoss(respectObjects, intelligenceObjects);
+        uiScore.text = "You gained " + HiddenObjectsManager.GetInstance().respectPoints + " Respect and "
+               + HiddenObjectsManager.GetInstance().intelligencePoints + " Intelligence points";
         GameObject.Find("ScoreBttn").GetComponent<Animation>().Play("ScoreAppearence");
+        canCount = false;
+        gameFinished = true;
     }
 
     public static void Blink()

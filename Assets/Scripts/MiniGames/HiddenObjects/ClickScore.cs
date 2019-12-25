@@ -18,7 +18,7 @@ public class ClickScore : MonoBehaviour
 	
 	void OnMouseDown()
 	{
-		HiddenObjectsManager.GetInstance().OnFinish(new RatingEntity());
+		HiddenObjectsManager.GetInstance().OnFinish(HiddenObjectsManager.GetInstance().GetPoints());
         
 	}
 }

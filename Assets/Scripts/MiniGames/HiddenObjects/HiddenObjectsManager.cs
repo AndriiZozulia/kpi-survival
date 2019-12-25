@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class HiddenObjectsManager : MiniGameAction
 {
 	public static HiddenObjectsManager Instance;
-	public int scoreDiff = 0;
+	public int  respectPoints;
+    public int intelligencePoints;
 
     protected new void Start()
     {
@@ -23,14 +24,20 @@ public class HiddenObjectsManager : MiniGameAction
         return Instance;
     }
 
-    public void OnLoss(int foundObjects)
+    public void OnLoss(int respectObjects, int intelligenceObjects)
     {
-        scoreDiff += foundObjects;
+        respectPoints = respectObjects;
+        intelligencePoints = intelligenceObjects;
     }
 
-    public int OnVictory(float timeLeft, int numberOfObjects)
+    public void OnVictory(float timeLeft, int respectObjects, int intelligenceObjects)
     {
-        scoreDiff = (int)(numberOfObjects * (timeLeft / 10 + 1));
-        return scoreDiff;
+        respectPoints = (int)(respectObjects * (timeLeft / 10 + 1));
+        intelligencePoints = (int)(intelligenceObjects * (timeLeft / 10 + 1));
+    }
+
+    public RatingEntity GetPoints()
+    {
+        return new RatingEntity(intelligencePoints, respectPoints);
     }
 }

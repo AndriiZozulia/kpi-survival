@@ -4,7 +4,6 @@
 	    <Replica type="phrase" text="Думает: Черт!" texture=""/>
 	    <Replica type="phrase" text="Думает: Я проспал на первый срез знаний " texture=""/>
 	    <Replica type="phrase" text="Думает: Нужно бежать !" texture=""/>
-	    <Action id="MiniGameHO" type="MiniGame" path="MiniGameHO.xml" texture="" skip="true" />
 
 	</Replics>
 </DialogEntity> 
