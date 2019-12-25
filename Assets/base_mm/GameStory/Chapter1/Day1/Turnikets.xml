@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Quest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Turnikets" day="Chapter1/Day1" background="Backgrounds/18corp" >
   <Actions>
-    <Action id="Dialog4" type="Dialog" path="Dialog4.xml" texture="TapArea/18corp" skip="false" />
+    <Action id="Dialog4" type="Dialog" path="Dialog4.xml" texture="TapArea/18corp" skip="false" x="80.0" y="-110.0" />
   </Actions>
 </Quest>
